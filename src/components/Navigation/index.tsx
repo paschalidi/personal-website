@@ -1,35 +1,22 @@
-"use client"; // using the radix library and they use client side code
-import React from "react";
-import { NavigationDocumentData, Simplify } from "../../../prismicio-types";
+import { createClient } from "../../prismicio";
 import { NavigationMenu } from "./NavigationMenu";
-import { MobileNavigationMenu } from "./MobileNavigationMenu";
 import clsx from "clsx";
+import { MobileNavigationMenu } from "./MobileNavigationMenu";
+import React from "react";
 
-export const Navigation = ({
-  isLogoWhite,
-  isTextWhite,
-  data,
-}: {
-  isLogoWhite: boolean;
-  isTextWhite: boolean;
-  data: Simplify<NavigationDocumentData>;
-}) => {
+export async function Index() {
+  const client = createClient();
+  const navigation = await client.getSingle("navigation");
+  const { data } = navigation;
+
   return (
     <div className="relative z-50">
       <div className={"hidden md:block"}>
-        <NavigationMenu
-          data={data}
-          isLogoWhite={isLogoWhite}
-          isTextWhite={isTextWhite}
-        />
+        <NavigationMenu data={data} />
       </div>
       <div className={clsx("md:hidden")}>
-        <MobileNavigationMenu
-          homepageLink={data.homepage_link}
-          links={data.links}
-          logo={data.logo}
-        />
+        <MobileNavigationMenu data={data} />
       </div>
     </div>
   );
-};
+}

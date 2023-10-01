@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { SliceZone } from "@prismicio/react";
 
-import { createClient } from "../../prismicio";
-import { components } from "../../slices";
+import { createClient } from "../prismicio";
+import { components } from "../slices";
 import { Metadata } from "next";
-import { SSRNavigation } from "../../components/Navigation/SSRNavigation";
+import { Index } from "../components/Navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -30,7 +30,6 @@ export default async function Page() {
 
   return (
     <>
-      <SSRNavigation />
       <SliceZone slices={page.data.slices} components={components} />
     </>
   );

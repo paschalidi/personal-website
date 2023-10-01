@@ -4,7 +4,7 @@ export function Bounded({
   as: Comp = "div",
   yPadding = "base",
   collapsible = true,
-  className,
+  className = "",
   children,
 }) {
   return (

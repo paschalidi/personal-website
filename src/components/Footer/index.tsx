@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { IconButton } from "../IconButton";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { FooterDocumentData, Simplify } from "../../../prismicio-types";
-import { socialMediaSvgList } from "../../utlis/socialMediaSvgList";
 import { isFilled } from "@prismicio/client";
 
 export const Footer = ({ data }: { data: Simplify<FooterDocumentData> }) => {

@@ -14,22 +14,6 @@ export const { repositoryName } = sm;
  */
 const routes: ClientConfig["routes"] = [
   {
-    type: "member_detail_page",
-    path: "/member/:uid",
-  },
-  {
-    type: "checkout_pages",
-    path: "/checkout/:uid",
-  },
-  {
-    type: "login_and_create_account",
-    path: "/account/:uid",
-  },
-  {
-    type: "page",
-    path: "/contact",
-  },
-  {
     type: "page",
     path: "/:uid",
   },
@@ -37,14 +21,6 @@ const routes: ClientConfig["routes"] = [
     type: "page",
     uid: "home",
     path: "/",
-  },
-  {
-    type: "blog_page",
-    path: "/blog/:uid",
-  },
-  {
-    type: "project_detail_page",
-    path: "/project/:uid",
   },
 ];
 

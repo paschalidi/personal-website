@@ -1,11 +1,12 @@
-import "../globals.css";
+import "./globals.css";
 
 import { Inter } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 
-import { repositoryName } from "../../prismicio";
+import { repositoryName } from "../prismicio";
 import { ReactNode } from "react";
-import { SSRFooter } from "../../components/Footer/SSRFooter";
+import { Index } from "../components/Navigation";
+import { Bounded } from "../components/Bounded";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,9 +22,12 @@ export default async function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="overflow-x-hidden antialiased">
-        {children}
-        <PrismicPreview repositoryName={repositoryName} />
-        <SSRFooter />
+        <Bounded yPadding={"sm"}>
+          <Index />
+
+          {children}
+          <PrismicPreview repositoryName={repositoryName} />
+        </Bounded>
       </body>
     </html>
   );
