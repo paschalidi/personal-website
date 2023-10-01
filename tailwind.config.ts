@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Noto Serif", "serif"],
+      sans: ["Kanit", "sans-serif"],
     },
     extend: {
       colors: {
