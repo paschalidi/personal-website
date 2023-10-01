@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { MobileNavigationMenu } from "./MobileNavigationMenu";
 import React from "react";
 
-export async function Index() {
+export async function Navigation() {
   const client = createClient();
   const navigation = await client.getSingle("navigation");
   const { data } = navigation;

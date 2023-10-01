@@ -12,7 +12,7 @@ type CommonLinkProps = {
   /**
    * How large should the button be? Defaults to `medium`
    */
-  size?: "small" | "medium";
+  size?: "small" | "medium" | "large";
   /**
    * Text of contents
    */
@@ -87,10 +87,15 @@ export const Link = ({
       {_iconPosition === "left" && <Icon className="text-green-400 mr-2" />}
 
       <div
-        className={`
-          ${size === "medium" ? "text-lg" : "text-base"}
-          ${primary ? "" : "text-white"}
-        `}
+        className={clsx(
+          size === "medium"
+            ? "text-lg"
+            : size === "large"
+            ? "text-3xl"
+            : "text-md",
+          primary ? "" : "text-white",
+          "font-medium hover:text-zinc-800",
+        )}
       >
         {typeof text === "string" ? text : <PrismicText field={text} />}
       </div>

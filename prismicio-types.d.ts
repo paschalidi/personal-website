@@ -5,6 +5,147 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Content for About Page documents
+ */
+interface AboutDocumentData {
+  /**
+   * Image  field in *About Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text field in *About Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField
+  /**
+   * meta title field in *About Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.meta_title
+   * - **Tab**: SEO tags
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * meta description field in *About Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.meta_description
+   * - **Tab**: SEO tags
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * meta image field in *About Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.meta_image
+   * - **Tab**: SEO tags
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * About Page document from Prismic
+ *
+ * - **API ID**: `about`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
+
+/**
+ * Item in *Footer → copyright_links*
+ */
+export interface FooterDocumentDataCopyrightLinksItem {
+  /**
+   * text field in *Footer → copyright_links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright_links[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
+   * link field in *Footer → copyright_links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * copyright text field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copyright_text: prismic.KeyTextField;
+
+  /**
+   * copyright_links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  copyright_links: prismic.GroupField<
+    Simplify<FooterDocumentDataCopyrightLinksItem>
+  >;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
+/**
  * Item in *Navigation → Links*
  */
 export interface NavigationDocumentDataLinksItem {
@@ -34,6 +175,28 @@ export interface NavigationDocumentDataLinksItem {
  */
 interface NavigationDocumentData {
   /**
+   * Homepage label field in *Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.homepage_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  homepage_label: prismic.KeyTextField;
+
+  /**
+   * homepage link field in *Navigation*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.homepage_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  homepage_link: prismic.LinkField;
+
+  /**
    * Links field in *Navigation*
    *
    * - **Field Type**: Group
@@ -61,7 +224,7 @@ export type NavigationDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = never;
+type PageDocumentDataSlicesSlice = SingleImageSlice;
 
 /**
  * Content for Page documents
@@ -145,42 +308,11 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-/**
- * Content for Settings documents
- */
-interface SettingsDocumentData {
-  /**
-   * Site Title field in *Settings*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: Title of the site
-   * - **API ID Path**: settings.siteTitle
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  siteTitle: prismic.TitleField;
-}
-
-/**
- * Settings document from Prismic
- *
- * - **API ID**: `settings`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type SettingsDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<SettingsDocumentData>,
-    "settings",
-    Lang
-  >;
-
 export type AllDocumentTypes =
+  | AboutDocument
+  | FooterDocument
   | NavigationDocument
-  | PageDocument
-  | SettingsDocument;
+  | PageDocument;
 
 /**
  * Primary content in *HeroSimpleVersion → Primary*
@@ -247,6 +379,51 @@ export type HeroSimpleVersionSlice = prismic.SharedSlice<
   HeroSimpleVersionSliceVariation
 >;
 
+/**
+ * Primary content in *SingleImage → Primary*
+ */
+export interface SingleImageSliceDefaultPrimary {
+  /**
+   * image field in *SingleImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for SingleImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SingleImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SingleImage*
+ */
+type SingleImageSliceVariation = SingleImageSliceDefault;
+
+/**
+ * SingleImage Shared Slice
+ *
+ * - **API ID**: `single_image`
+ * - **Description**: SingleImage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleImageSlice = prismic.SharedSlice<
+  "single_image",
+  SingleImageSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -257,19 +434,26 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      AboutDocument,
+      AboutDocumentData,
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataCopyrightLinksItem,
       NavigationDocument,
       NavigationDocumentData,
       NavigationDocumentDataLinksItem,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
-      SettingsDocument,
-      SettingsDocumentData,
       AllDocumentTypes,
       HeroSimpleVersionSlice,
       HeroSimpleVersionSliceDefaultPrimary,
       HeroSimpleVersionSliceVariation,
       HeroSimpleVersionSliceDefault,
+      SingleImageSlice,
+      SingleImageSliceDefaultPrimary,
+      SingleImageSliceVariation,
+      SingleImageSliceDefault,
     };
   }
 }

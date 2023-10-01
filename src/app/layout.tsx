@@ -5,8 +5,9 @@ import { PrismicPreview } from "@prismicio/next";
 
 import { repositoryName } from "../prismicio";
 import { ReactNode } from "react";
-import { Index } from "../components/Navigation";
+import { Navigation } from "../components/Navigation/navigation";
 import { Bounded } from "../components/Bounded";
+import { Footer } from "../components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,13 +22,11 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="overflow-x-hidden antialiased">
-        <Bounded yPadding={"sm"}>
-          <Index />
-
-          {children}
-          <PrismicPreview repositoryName={repositoryName} />
-        </Bounded>
+      <body className="pc pt-10 md:pt-14 overflow-x-hidden antialiased bg-zinc-50">
+        <Navigation />
+        {children}
+        <PrismicPreview repositoryName={repositoryName} />
+        <Footer />
       </body>
     </html>
   );

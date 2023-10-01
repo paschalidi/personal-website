@@ -6,6 +6,21 @@
   "status": true,
   "json": {
     "Main": {
+      "homepage_label": {
+        "type": "Text",
+        "config": {
+          "label": "Homepage label",
+          "placeholder": ""
+        }
+      },
+      "homepage_link": {
+        "type": "Link",
+        "config": {
+          "label": "homepage link",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "links": {
         "type": "Group",
         "config": {

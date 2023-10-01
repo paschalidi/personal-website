@@ -4,4 +4,5 @@ import dynamic from "next/dynamic";
 
 export const components = {
   hero_simple_version: dynamic(() => import("./HeroSimpleVersion")),
+  single_image: dynamic(() => import("./SingleImage")),
 };

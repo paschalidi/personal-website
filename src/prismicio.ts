@@ -22,6 +22,10 @@ const routes: ClientConfig["routes"] = [
     uid: "home",
     path: "/",
   },
+  {
+    type: "about",
+    path: "/about",
+  },
 ];
 
 /**
