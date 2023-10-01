@@ -1,5 +1,5 @@
 import { redirectToPreviewURL } from "@prismicio/next";
-import { createClient } from "@/prismicio";
+import { createClient } from "../../../prismicio";
 
 /**
  * @param {import("next/server").NextRequest} request
