@@ -23,8 +23,17 @@ export const MobileNavigationMenu = ({
   }, [isOpen]);
 
   return (
-    <header className={clsx("pc bg-white")}>
+    <header>
       <nav className="relative flex w-full flex-wrap items-center justify-between py-2 h-[64px]">
+        <div>
+          <Link
+            size={"small"}
+            className={clsx("text-black text-2xl")}
+            key={data.homepage_label}
+            link={data.homepage_link}
+            text={data.homepage_label}
+          />
+        </div>
         <Menubar.Root className="flex p-[3px]">
           <Menubar.Menu>
             <Menubar.Trigger
@@ -37,7 +46,7 @@ export const MobileNavigationMenu = ({
               <Menubar.Portal>
                 <Menubar.Content
                   loop
-                  className="md:hidden animation w-screen h-[100vh] bg-white z-50"
+                  className="md:hidden animation w-screen h-[100vh] bg-zinc-50 z-50"
                   align="start"
                   sideOffset={-43}
                   alignOffset={0}
@@ -46,6 +55,15 @@ export const MobileNavigationMenu = ({
                     <div className="relative flex w-full flex-wrap items-center justify-between py-2 lg:py-4 h-[64px] md:h-[92px]">
                       <>
                         <div className="flex w-full flex-wrap items-center justify-between">
+                          <div>
+                            <Link
+                              size={"small"}
+                              className={clsx("text-black text-2xl")}
+                              key={data.homepage_label}
+                              link={data.homepage_link}
+                              text={data.homepage_label}
+                            />
+                          </div>
                           <div onClick={() => setIsOpen(false)}>
                             <Close className={"mr-1"} />
                           </div>
@@ -60,7 +78,7 @@ export const MobileNavigationMenu = ({
                               link={link}
                               className={clsx(
                                 index === 0 && "mt-12",
-                                "mb-10 text-2xl",
+                                "mb-10 text-2xl text-zinc-600",
                               )}
                               text={label}
                             />
