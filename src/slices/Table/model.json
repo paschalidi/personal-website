@@ -1,0 +1,66 @@
+{
+  "id": "table",
+  "type": "SharedSlice",
+  "name": "Table",
+  "description": "Table",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "search_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Search button text",
+            "placeholder": ""
+          }
+        },
+        "search_field_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "Search field placeholder",
+            "placeholder": ""
+          }
+        },
+        "is_table_searchable": {
+          "type": "Boolean",
+          "config": {
+            "label": "Is Table Searchable",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "no_results_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "No results text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "column_name": {
+          "type": "Text",
+          "config": {
+            "label": "column name",
+            "placeholder": ""
+          }
+        },
+        "column_id": {
+          "type": "Text",
+          "config": {
+            "label": "column id",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

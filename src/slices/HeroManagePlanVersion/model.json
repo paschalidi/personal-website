@@ -1,0 +1,224 @@
+{
+  "id": "hero_manage_plan_version",
+  "type": "SharedSlice",
+  "name": "HeroManagePlanVersion",
+  "description": "HeroManagePlanVersion",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "header": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Header",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "badge": {
+          "type": "Image",
+          "config": {
+            "label": "badge",
+            "constraint": {
+              "width": 184,
+              "height": 48
+            },
+            "thumbnails": []
+          }
+        },
+        "view_verification_link": {
+          "type": "Link",
+          "config": {
+            "label": "view verification link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "view_verification_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "view verification link text",
+            "placeholder": ""
+          }
+        },
+        "offset_amount_text": {
+          "type": "Text",
+          "config": {
+            "label": "offset amount text",
+            "placeholder": ""
+          }
+        },
+        "offset_amount_info_text": {
+          "type": "Text",
+          "config": {
+            "label": "offset amount info text",
+            "placeholder": ""
+          }
+        },
+        "offset_percentage": {
+          "type": "Number",
+          "config": {
+            "label": "offset percentage",
+            "placeholder": ""
+          }
+        },
+        "your_impact_text": {
+          "type": "Text",
+          "config": {
+            "label": "your impact text",
+            "placeholder": ""
+          }
+        },
+        "social_media_links": {
+          "type": "Link",
+          "config": {
+            "label": "social media links",
+            "select": "document"
+          }
+        },
+        "plan_text": {
+          "type": "Text",
+          "config": {
+            "label": "plan text",
+            "placeholder": ""
+          }
+        },
+        "plan_ammount": {
+          "type": "Text",
+          "config": {
+            "label": "plan ammount",
+            "placeholder": ""
+          }
+        },
+        "monthly_visitors": {
+          "type": "Text",
+          "config": {
+            "label": "monthly visitors",
+            "placeholder": ""
+          }
+        },
+        "plan_info_text": {
+          "type": "Text",
+          "config": {
+            "label": "plan info text",
+            "placeholder": ""
+          }
+        },
+        "emission_offset_text": {
+          "type": "Text",
+          "config": {
+            "label": "emission offset text",
+            "placeholder": ""
+          }
+        },
+        "next_bill_text": {
+          "type": "Text",
+          "config": {
+            "label": "next bill text",
+            "placeholder": ""
+          }
+        },
+        "renews_text": {
+          "type": "Text",
+          "config": {
+            "label": "renews text",
+            "placeholder": ""
+          }
+        },
+        "column_1_header": {
+          "type": "Text",
+          "config": {
+            "label": "column 1 header",
+            "placeholder": ""
+          }
+        },
+        "column_1_text": {
+          "type": "Text",
+          "config": {
+            "label": "column 1 text",
+            "placeholder": ""
+          }
+        },
+        "column_2_header": {
+          "type": "Text",
+          "config": {
+            "label": "column 2 header",
+            "placeholder": ""
+          }
+        },
+        "column_2_text": {
+          "type": "Text",
+          "config": {
+            "label": "column 2 text",
+            "placeholder": ""
+          }
+        },
+        "column_3_header": {
+          "type": "Text",
+          "config": {
+            "label": "column 3 header",
+            "placeholder": ""
+          }
+        },
+        "column_3_text": {
+          "type": "Text",
+          "config": {
+            "label": "column 3 text",
+            "placeholder": ""
+          }
+        },
+        "column_4_header": {
+          "type": "Text",
+          "config": {
+            "label": "column 4 header",
+            "placeholder": ""
+          }
+        },
+        "column_4_text": {
+          "type": "Text",
+          "config": {
+            "label": "column 4 text",
+            "placeholder": ""
+          }
+        },
+        "change_plan_link": {
+          "type": "Link",
+          "config": {
+            "label": "change plan link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "change_plan_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "change plan link text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "impact_text_with_units": {
+          "type": "Text",
+          "config": {
+            "label": "impact_text_with_units",
+            "placeholder": ""
+          }
+        },
+        "small_text": {
+          "type": "Text",
+          "config": {
+            "label": "small_text",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

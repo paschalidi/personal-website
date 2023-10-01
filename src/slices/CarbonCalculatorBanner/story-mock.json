@@ -1,0 +1,35 @@
+{
+  "variation": "default",
+  "version": "initial",
+  "items": [],
+  "primary": {
+    "image": {
+      "dimensions": {
+        "width": 144,
+        "height": 144
+      },
+      "alt": "foot",
+      "copyright": null,
+      "url": "https://images.prismic.io/carbon-offset/2b9896b4-57f7-4ed9-ade8-cfbf0e605044_img.png?auto=compress,format"
+    },
+    "paragraph": [
+      {
+        "type": "paragraph",
+        "text": "Enter your website and view your estimated carbon impact.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "form_placeholder": "Enter your website",
+    "link_text": "Calculate",
+    "link": {
+      "link_type": "Media",
+      "name": "mock",
+      "kind": "image",
+      "url": "https://source.unsplash.com/random",
+      "size": "10kB"
+    }
+  },
+  "id": "carbon_calculator_banner$09cfa5e0-e841-4330-bdf7-06ad7e3a8515",
+  "slice_type": "carbon_calculator_banner"
+}

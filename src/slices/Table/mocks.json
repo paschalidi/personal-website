@@ -1,0 +1,56 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"search_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "smoke",
+				"type": "Text"
+			},
+			"search_field_placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "wool",
+				"type": "Text"
+			},
+			"is_table_searchable": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"no_results_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ea consectetur Lorem laborum labore fugiat sint consectetur duis in nisi ipsum duis."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"column_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "accurate",
+							"type": "Text"
+						}
+					],
+					[
+						"column_id",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "frame",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,64 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Cillum veniam ullamco pariatur sit ut anim quis ad cillum qui adipisicing eiusmod. Ut nulla cupidatat deserunt aliquip adipisicing ut sint magna sunt."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+								"width": 3168,
+								"height": 4752
+							},
+							"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?rect=0%2C594%2C3168%2C3564&w=384&h=432",
+							"width": 384,
+							"height": 432,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 594
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Anim laborum elit consequat in eu qui ut anim pariatur sit eu officia id. Quis duis voluptate do velit aliqua non culpa nisi sunt ex adipisicing ad sit."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

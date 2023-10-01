@@ -1,0 +1,125 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"buttonText": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Go neutral"
+			},
+			"backgroundImage": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?rect=0%2C0%2C0%2C0&w=3168&h=4752",
+				"width": 3168,
+				"height": 4752,
+				"edit": {
+					"zoom": 3,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"primary_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Remove your website’s carbon footprint—We make it easy",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"secondary_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Calculate your website’s footprint in 30 seconds.  No commitment.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"total_number_of_offset": {
+				"__TYPE__": "FieldContent",
+				"type": "Number",
+				"value": "2276345"
+			},
+			"offset_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Website visits offset in the last 24 hours",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"certification_icon": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+					"width": 12288,
+					"height": 16384
+				},
+				"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+				"width": 12288,
+				"height": 16384,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"certification_icon_text": {
+				"__TYPE__": "FieldContent",
+				"value": "bus",
+				"type": "Text"
+			},
+			"animation_lottie": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"id": "mock_Media_link",
+					"kind": "image/jpeg",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"__TYPE__": "FileLink"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

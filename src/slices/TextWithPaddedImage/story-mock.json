@@ -1,0 +1,90 @@
+[
+  {
+    "variation": "default",
+    "version": "initial",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "background_image": {
+        "dimensions": {
+          "width": 3022,
+          "height": 1312
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/carbon-offset/e915d80e-46f3-4f4a-9c91-c54ce7f8d86b_Bubbles-2-full.png?auto=compress,format"
+      },
+      "image": {
+        "dimensions": {
+          "width": 480,
+          "height": 480
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/carbon-offset/8548cda4-9e98-4daa-b9a2-b9b4447a8670_img_1.png?auto=compress,format&rect=0,0,400,400&w=480&h=480"
+      },
+      "tagline": [
+        {
+          "type": "paragraph",
+          "text": "Our mission",
+          "spans": []
+        }
+      ],
+      "paragraph": [
+        {
+          "type": "paragraph",
+          "text": "Our mission is to drive positive change by empowering individuals and businesses to embrace sustainable practices. Through innovative solutions, education, and collaborative partnerships, we aim to elevate the global commitment to environmental stewardship, creating a greener and more sustainable planet for future generations.",
+          "spans": []
+        }
+      ],
+      "link_text": null,
+      "link": {
+        "link_type": "Any"
+      }
+    },
+    "id": "text_with_padded_image$34dabada-474f-45e5-b47d-5ff431d19116",
+    "slice_type": "text_with_padded_image",
+    "slice_label": null
+  },
+  {
+    "variation": "withImageOnTheRight",
+    "version": "initial",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "background_image": {},
+      "image": {
+        "dimensions": {
+          "width": 480,
+          "height": 480
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/carbon-offset/e562ab40-67b3-49f3-8348-31835f6e39df_img.png?auto=compress,format&rect=0,0,960,960&w=480&h=480"
+      },
+      "tagline": [
+        {
+          "type": "paragraph",
+          "text": "Deloitte watches over",
+          "spans": []
+        }
+      ],
+      "paragraph": [
+        {
+          "type": "paragraph",
+          "text": "Deloitte conducts ongoing audits of our CO2-accounts. They show that our projects and investments on average compensate 200% of our members’ emissions.",
+          "spans": []
+        }
+      ],
+      "link_text": "View the letter",
+      "link": {
+        "link_type": "Any"
+      }
+    },
+    "id": "text_with_padded_image$f36dd7ae-4b5f-4da7-bf16-f44f4794a2e9",
+    "slice_type": "text_with_padded_image",
+    "slice_label": null
+  }
+]

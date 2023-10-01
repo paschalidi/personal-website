@@ -1,0 +1,32 @@
+{
+  "image": {
+    "dimensions": {
+      "width": 280,
+      "height": 280
+    },
+    "alt": null,
+    "copyright": null,
+    "url": "https://images.prismic.io/carbon-offset/91a1d6ab-1a35-47e1-af2b-835330c288a6_img_2.png?auto=compress,format&rect=0,0,560,560&w=280&h=280"
+  },
+  "date": "2023-08-27",
+  "title": [
+    {
+      "type": "paragraph",
+      "text": "How Eco-Friendly Companies Are Leading the Path to Change",
+      "spans": []
+    }
+  ],
+  "link": {
+    "id": "ZO0UqxAAACAA-rDo",
+    "type": "blog_page",
+    "tags": [],
+    "lang": "en-us",
+    "slug": "the-carbon-footprint-breakdown-understanding-and-minimizing-your-impact",
+    "first_publication_date": "2023-08-28T21:44:40+0000",
+    "last_publication_date": "2023-08-29T18:00:59+0000",
+    "uid": "the-carbon-footprint-breakdown",
+    "link_type": "Document",
+    "isBroken": false
+  },
+  "linkText": "Read more"
+}

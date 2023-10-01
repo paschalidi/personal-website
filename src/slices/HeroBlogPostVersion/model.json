@@ -1,0 +1,71 @@
+{
+  "id": "hero_blog_version",
+  "type": "SharedSlice",
+  "name": "HeroBlogPostVersion",
+  "description": "HeroBlogVersion",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "untiMd",
+                "width": 768,
+                "height": 600
+              }
+            ]
+          }
+        },
+        "blog_date": {
+          "type": "Date",
+          "config": {
+            "label": "Blog date",
+            "placeholder": ""
+          }
+        },
+        "blog_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Blog Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading1,strong,em"
+          }
+        }
+      },
+      "items": {
+        "social_media_link": {
+          "type": "Link",
+          "config": {
+            "label": "social media link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "svg_id": {
+          "type": "Select",
+          "config": {
+            "label": "svg id",
+            "placeholder": "",
+            "options": [
+              "facebook",
+              "twitter",
+              "linkedin"
+            ],
+            "default_value": "facebook"
+          }
+        }
+      }
+    }
+  ]
+}

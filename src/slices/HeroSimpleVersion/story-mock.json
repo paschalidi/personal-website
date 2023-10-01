@@ -1,0 +1,35 @@
+{
+  "variation": "default",
+  "version": "initial",
+  "items": [
+    {}
+  ],
+  "primary": {
+    "background_image": {
+      "dimensions": {
+        "width": 3024,
+        "height": 1026
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/carbon-offset/09e3b1a6-3746-4bb7-bfd6-e1c11819d9f1_about-header-trees.png?auto=compress,format"
+    },
+    "header": [
+      {
+        "type": "heading1",
+        "text": "About us\n",
+        "spans": []
+      }
+    ],
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "We’re on a mission to do our part in making the planet more sustainable.",
+        "spans": []
+      }
+    ]
+  },
+  "id": "hero_simple_version$5824cf6a-9b0a-4599-b01e-6c41bcb5bd6b",
+  "slice_type": "hero_simple_version",
+  "slice_label": null
+}

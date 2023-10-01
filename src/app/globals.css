@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-weight: 300;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+
+  @screen md {
+    h1 {
+      @apply text-6xl;
+    }
+  }
+}
+
+@layer base {
+  h2 {
+    @apply text-3xl;
+  }
+
+  @screen md {
+    h2 {
+      @apply text-5xl;
+    }
+  }
+}
+
+@layer base {
+  h3 {
+    @apply text-3xl;
+  }
+
+  @screen md {
+    h3 {
+      @apply text-4xl;
+    }
+  }
+}
+
+@screen md {
+  .h3 {
+    @apply text-5xl;
+  }
+}
+
+/****** Page Container *******/
+.pc {
+  @apply pl-4 pr-4;
+}
+
+@screen sm {
+  .pc {
+    @apply sm:pl-8 sm:pr-8
+  }
+}
+@screen md {
+  .pc {
+    @apply md:pl-12 md:pr-12
+  }
+}
+@screen lg {
+  .pc {
+    @apply lg:pl-16 lg:pr-16
+  }
+}
+@screen xl {
+  .pc {
+    @apply xl:pl-20 xl:pr-20
+  }
+}
+
+/****** Page Container Left *******/
+.pc-l {
+  @apply pl-4;
+}
+
+@screen sm {
+  .pc-l {
+    @apply sm:pl-8;
+  }
+}
+@screen md {
+  .pc-l {
+    @apply md:pl-12;
+  }
+}
+@screen lg {
+  .pc-l {
+    @apply lg:pl-16;
+  }
+}
+@screen xl {
+  .pc-l {
+    @apply xl:pl-20;
+  }
+}
+
+/****** Page Container Right *******/
+.pc-r {
+  @apply pr-4;
+}
+
+@screen sm {
+  .pc-r {
+    @apply sm:pr-8;
+  }
+}
+@screen md {
+  .pc-r {
+    @apply md:pr-12;
+  }
+}
+@screen lg {
+  .pc-r {
+    @apply lg:pr-16;
+  }
+}
+@screen xl {
+  .pc-r {
+    @apply xl:pr-28;
+  }
+}

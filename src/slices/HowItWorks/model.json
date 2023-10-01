@@ -1,0 +1,96 @@
+{
+  "id": "how_it_works",
+  "type": "SharedSlice",
+  "name": "HowItWorks",
+  "description": "HowItWorks",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "header": {
+          "type": "StructuredText",
+          "config": {
+            "label": "header",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "icon1": {
+          "type": "Image",
+          "config": {
+            "label": "icon1",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text1",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "icon2": {
+          "type": "Image",
+          "config": {
+            "label": "icon2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text2",
+            "placeholder": "adds the text for the second icon",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "icon3": {
+          "type": "Image",
+          "config": {
+            "label": "icon3",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text3": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text3",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "icon4": {
+          "type": "Image",
+          "config": {
+            "label": "icon4",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text4": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text4",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

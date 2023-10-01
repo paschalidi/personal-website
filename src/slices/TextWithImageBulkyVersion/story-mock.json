@@ -1,0 +1,99 @@
+{
+  "variation": "default",
+  "version": "initial",
+  "items": [
+    {
+      "factor": [
+        {
+          "type": "heading3",
+          "text": "Monthly visitors ",
+          "spans": [],
+          "direction": "ltr"
+        }
+      ]
+    },
+    {
+      "factor": [
+        {
+          "type": "heading3",
+          "text": "Page size",
+          "spans": [],
+          "direction": "ltr"
+        }
+      ]
+    },
+    {
+      "factor": [
+        {
+          "type": "heading3",
+          "text": "Visitor location",
+          "spans": [],
+          "direction": "ltr"
+        }
+      ]
+    }
+  ],
+  "primary": {
+    "text": [
+      {
+        "type": "heading6",
+        "text": "How it’s calculated",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "heading2",
+        "text": "We create an estimate based on traffic in your local region and the energy a server uses when someone visits a page.",
+        "spans": [
+          {
+            "start": 31,
+            "end": 38,
+            "type": "em"
+          },
+          {
+            "start": 68,
+            "end": 74,
+            "type": "em"
+          }
+        ],
+        "direction": "ltr"
+      }
+    ],
+    "background_image": {
+      "dimensions": {
+        "width": 560,
+        "height": 560
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/carbon-offset/d9eb6bfe-38df-48ca-b0fc-dc38774bb7e3_img_1.png?auto=format,compress"
+    },
+    "top_text": [
+      {
+        "type": "heading2",
+        "text": "We calculate",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "low_text": [
+      {
+        "type": "heading2",
+        "text": "Then we fund projects to offset this number.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "multiplication_result": [
+      {
+        "type": "heading3",
+        "text": "Estimated CO2",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ]
+  },
+  "id": "text_with_image_red_version$964155a0-854b-4fae-ba90-303fe0806c95",
+  "slice_type": "text_with_image_red_version",
+  "slice_label": null
+}

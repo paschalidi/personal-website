@@ -1,0 +1,120 @@
+[
+  {
+    "variation": "default",
+    "version": "initial",
+    "items": [],
+    "primary": {
+      "header": [
+        {
+          "type": "heading1",
+          "text": "The clean water project",
+          "spans": [],
+          "direction": "ltr"
+        },
+        {
+          "type": "paragraph",
+          "text": "Project description Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.",
+          "spans": [],
+          "direction": "ltr"
+        }
+      ],
+      "link": {
+        "link_type": "Web",
+        "url": "https://google.com/",
+        "target": "_blank"
+      },
+      "link_text": "Visit project website",
+      "logo_1": {
+        "dimensions": {
+          "width": 100,
+          "height": 100
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://carbon-offset.cdn.prismic.io/carbon-offset/37a0e222-8e09-4e8f-ab3a-b4e476e59bb5_svg1.svg?auto=compress,format"
+      },
+      "logo_2": {
+        "dimensions": {
+          "width": 95,
+          "height": 42
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://carbon-offset.cdn.prismic.io/carbon-offset/5bf08796-e14d-4425-8ac8-e1d3ced4157d_svg2.svg?auto=compress,format"
+      },
+      "logo_text": [
+        {
+          "type": "paragraph",
+          "text": "We only support certified Gold Standard or Verra projects.",
+          "spans": [],
+          "direction": "ltr"
+        }
+      ]
+    },
+    "id": "project_details_hero$5c22be85-16bc-4337-a550-9a9eede473d8",
+    "slice_type": "project_details_hero",
+    "slice_label": null
+  },
+  {
+    "variation": "withStatistics",
+    "version": "initial",
+    "items": [],
+    "primary": {
+      "header": [
+        {
+          "type": "heading1",
+          "text": "Our neutral supporters",
+          "spans": [],
+          "direction": "ltr"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": [],
+          "direction": "ltr"
+        },
+        {
+          "type": "paragraph",
+          "text": "View everyone who has taken the leap and acted to reduce their carbon footprint with us.",
+          "spans": [],
+          "direction": "ltr"
+        }
+      ],
+      "logo_1": {
+        "dimensions": {
+          "width": 100,
+          "height": 100
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://carbon-offset.cdn.prismic.io/carbon-offset/37a0e222-8e09-4e8f-ab3a-b4e476e59bb5_svg1.svg?auto=compress,format"
+      },
+      "logo_2": {
+        "dimensions": {
+          "width": 95,
+          "height": 42
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://carbon-offset.cdn.prismic.io/carbon-offset/5bf08796-e14d-4425-8ac8-e1d3ced4157d_svg2.svg?auto=compress,format"
+      },
+      "logo_text": [
+        {
+          "type": "paragraph",
+          "text": "We only support certified Gold Standard or Verra projects.",
+          "spans": [],
+          "direction": "ltr"
+        }
+      ],
+      "stat_1": "200+",
+      "stat_text_1": "Active supporters",
+      "stat_2": "128,000kg",
+      "stat_text_2": "data of page loads offset",
+      "stat_3": "8TB",
+      "stat_text_3": "data of page loads offset"
+    },
+    "id": "project_details_hero$befbab09-7e03-4b4a-880b-03956f69c854",
+    "slice_type": "project_details_hero",
+    "slice_label": null
+  }
+]

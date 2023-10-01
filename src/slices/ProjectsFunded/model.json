@@ -1,0 +1,137 @@
+{
+  "id": "projects_funded",
+  "type": "SharedSlice",
+  "name": "ProjectsFunded",
+  "description": "ProjectsFunded",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "header": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Header",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        }
+      },
+      "items": {
+        "project_image": {
+          "type": "Image",
+          "config": {
+            "label": "project image",
+            "constraint": {
+              "width": 200,
+              "height": 200
+            },
+            "thumbnails": []
+          }
+        },
+        "small_text": {
+          "type": "Text",
+          "config": {
+            "label": "small text",
+            "placeholder": ""
+          }
+        },
+        "project_header": {
+          "type": "Text",
+          "config": {
+            "label": "project header",
+            "placeholder": ""
+          }
+        },
+        "project_link": {
+          "type": "Link",
+          "config": {
+            "label": "project link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "project_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "project link text",
+            "placeholder": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "managePlanVersion",
+      "name": "Manage Plan Version",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "header": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Header",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "publicity_text": {
+          "type": "Text",
+          "config": {
+            "label": "Publicity text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "project_image": {
+          "type": "Image",
+          "config": {
+            "label": "project image",
+            "constraint": {
+              "width": 200,
+              "height": 200
+            },
+            "thumbnails": []
+          }
+        },
+        "small_text": {
+          "type": "Text",
+          "config": {
+            "label": "small text",
+            "placeholder": ""
+          }
+        },
+        "project_header": {
+          "type": "Text",
+          "config": {
+            "label": "project header",
+            "placeholder": ""
+          }
+        },
+        "project_link": {
+          "type": "Link",
+          "config": {
+            "label": "project link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "project_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "project link text",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}
