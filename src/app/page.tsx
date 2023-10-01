@@ -4,7 +4,6 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "../prismicio";
 import { components } from "../slices";
 import { Metadata } from "next";
-import { Navigation } from "../components/Navigation/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();

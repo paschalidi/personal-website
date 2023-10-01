@@ -7,7 +7,10 @@ export const BlogBounded = ({
   children,
 }) => {
   return (
-    <Comp data-collapsible={collapsible} className={clsx("max-w-lg m-auto", className)}>
+    <Comp
+      data-collapsible={collapsible}
+      className={clsx("max-w-lg m-auto", className)}
+    >
       <div className="mx-auto w-full max-w-2xl">{children}</div>
     </Comp>
   );

@@ -6,7 +6,6 @@ import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "../prismicio";
 import { ReactNode } from "react";
 import { Navigation } from "../components/Navigation/navigation";
-import { Bounded } from "../components/Bounded";
 import { Footer } from "../components/Footer";
 
 const inter = Inter({
