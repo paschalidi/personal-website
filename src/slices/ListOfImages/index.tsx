@@ -89,10 +89,11 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
             >
               {items.map(({ description, image }) => {
                 return (
-                  <SwiperSlide key={asText(description)} className={"sm:mt-20"}>
+                  <SwiperSlide key={asText(description)}>
                     <PrismicNextImage
                       field={image}
-                      className={"max-h-[70vh] w-auto m-auto"}
+                      // todo work this here h and width
+                      className={"max-h-[80vh] max-w-full object-contain m-auto"}
                     />
                     <div className={"md:min-w-md m-auto mt-4"}>
                       <PrismicRichText
