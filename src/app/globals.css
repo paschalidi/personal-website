@@ -4,7 +4,7 @@
 
 body {
   font-weight: 300;
-  @apply tracking-wider;
+  @apply tracking-widest;
 }
 
 @layer base {
@@ -61,7 +61,7 @@ body {
 }
 @screen md {
   .pc {
-    @apply md:pl-44 md:pr-44
+    @apply md:pl-32 md:pr-32
   }
 }
 @screen lg {
@@ -71,7 +71,7 @@ body {
 }
 @screen xl {
   .pc {
-    @apply xl:pl-72 xl:pr-72
+    @apply xl:pl-56 xl:pr-56
   }
 }
 

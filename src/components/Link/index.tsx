@@ -82,7 +82,7 @@ export const Link = ({
     <PrismicNextLink
       onClick={onClick}
       field={link}
-      className={clsx("flex items-center", className)}
+      className={clsx("flex items-center hover:text-zinc-800", className)}
     >
       {_iconPosition === "left" && <Icon className="text-green-400 mr-2" />}
 
@@ -94,7 +94,7 @@ export const Link = ({
             ? "text-3xl"
             : "text-md",
           primary ? "" : "text-white",
-          "font-medium hover:text-zinc-800",
+          "font-medium ",
         )}
       >
         {typeof text === "string" ? text : <PrismicText field={text} />}

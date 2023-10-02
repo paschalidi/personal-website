@@ -10,7 +10,7 @@ export async function Navigation() {
   const { data } = navigation;
 
   return (
-    <div className="relative z-50">
+    <div className="relative z-20">
       <div className={"hidden md:block"}>
         <NavigationMenu data={data} />
       </div>

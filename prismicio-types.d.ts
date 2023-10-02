@@ -146,6 +146,31 @@ export type FooterDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Navigation → Dropdown Links*
+ */
+export interface NavigationDocumentDataDropdownLinksItem {
+  /**
+   * Link field in *Navigation → Dropdown Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.dropdown_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *Navigation → Dropdown Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.dropdown_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
  * Item in *Navigation → Links*
  */
 export interface NavigationDocumentDataLinksItem {
@@ -197,6 +222,30 @@ interface NavigationDocumentData {
   homepage_link: prismic.LinkField;
 
   /**
+   * Dropdown Links Header field in *Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.dropdown_links_header
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  dropdown_links_header: prismic.KeyTextField;
+
+  /**
+   * Dropdown Links field in *Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.dropdown_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  dropdown_links: prismic.GroupField<
+    Simplify<NavigationDocumentDataDropdownLinksItem>
+  >;
+
+  /**
    * Links field in *Navigation*
    *
    * - **Field Type**: Group
@@ -224,7 +273,7 @@ export type NavigationDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = SingleImageSlice;
+type PageDocumentDataSlicesSlice = ListOfImagesSlice | SingleImageSlice;
 
 /**
  * Content for Page documents
@@ -380,6 +429,76 @@ export type HeroSimpleVersionSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *ListOfImages → Primary*
+ */
+export interface ListOfImagesSliceDefaultPrimary {
+  /**
+   * Header field in *ListOfImages → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_of_images.primary.header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  header: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ListOfImages → Items*
+ */
+export interface ListOfImagesSliceDefaultItem {
+  /**
+   * Image field in *ListOfImages → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_of_images.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *ListOfImages → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_of_images.items[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ListOfImages Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListOfImagesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ListOfImagesSliceDefaultPrimary>,
+  Simplify<ListOfImagesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ListOfImages*
+ */
+type ListOfImagesSliceVariation = ListOfImagesSliceDefault;
+
+/**
+ * ListOfImages Shared Slice
+ *
+ * - **API ID**: `list_of_images`
+ * - **Description**: ListOfImages
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListOfImagesSlice = prismic.SharedSlice<
+  "list_of_images",
+  ListOfImagesSliceVariation
+>;
+
+/**
  * Primary content in *SingleImage → Primary*
  */
 export interface SingleImageSliceDefaultPrimary {
@@ -441,6 +560,7 @@ declare module "@prismicio/client" {
       FooterDocumentDataCopyrightLinksItem,
       NavigationDocument,
       NavigationDocumentData,
+      NavigationDocumentDataDropdownLinksItem,
       NavigationDocumentDataLinksItem,
       PageDocument,
       PageDocumentData,
@@ -450,6 +570,11 @@ declare module "@prismicio/client" {
       HeroSimpleVersionSliceDefaultPrimary,
       HeroSimpleVersionSliceVariation,
       HeroSimpleVersionSliceDefault,
+      ListOfImagesSlice,
+      ListOfImagesSliceDefaultPrimary,
+      ListOfImagesSliceDefaultItem,
+      ListOfImagesSliceVariation,
+      ListOfImagesSliceDefault,
       SingleImageSlice,
       SingleImageSliceDefaultPrimary,
       SingleImageSliceVariation,

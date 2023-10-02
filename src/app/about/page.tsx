@@ -39,12 +39,12 @@ export default async function Page({ params }: { params: Params }) {
     <div className="pt-12 pb-10 md:pt-28">
       <div
         className={clsx(
-          "flex flex-col lg:flex-row gap-12 lg:gap-24 leading-loose",
+          "flex flex-col lg:flex-row gap-12 lg:gap-24 leading-snug justify-between",
         )}
       >
         {prismic.isFilled.image(data.image) && (
           <div
-            className={clsx("order-2 lg:order-1 ")}
+            className={clsx("order-2 lg:order-1 lg:w-5/12 ")}
             style={{ backgroundImage: `url(${data.image})` }}
           >
             <PrismicNextImage
@@ -54,7 +54,7 @@ export default async function Page({ params }: { params: Params }) {
             />
           </div>
         )}
-        <div className={clsx("order-1 lg:order-2 lg:w-6/12")}>
+        <div className={clsx("order-1 lg:order-2 lg:w-6/12 tracking-wider")}>
           <PrismicRichText field={data.text} />
         </div>
       </div>

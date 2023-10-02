@@ -21,6 +21,37 @@
           "select": null
         }
       },
+      "dropdown_links_header": {
+        "type": "Text",
+        "config": {
+          "label": "Dropdown Links Header",
+          "placeholder": ""
+        }
+      },
+      "dropdown_links": {
+        "type": "Group",
+        "config": {
+          "label": "Dropdown Links",
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            },
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
       "links": {
         "type": "Group",
         "config": {
