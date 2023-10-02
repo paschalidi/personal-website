@@ -70,3 +70,26 @@ body {
   }
 }
 
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  outline: none;
+  @apply text-zinc-400;
+
+}
+
+.swiper .swiper-button-prev:after,
+.swiper .swiper-button-next:after {
+  @apply text-2xl;
+}
+
+.swiper-wrapper {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  @screen md {
+    min-height: auto;
+    align-items: end;
+  }
+}
+

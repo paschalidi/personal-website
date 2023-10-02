@@ -52,7 +52,7 @@ export const NavigationMenu = ({
               <Popover.Portal>
                 <Popover.Content
                   align={"end"}
-                  className="z-30 data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-4 py-3 shadow will-change-[transform,opacity] flex flex-col gap-2"
+                  className="z-30 outline-none data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-4 py-3 shadow will-change-[transform,opacity] flex flex-col gap-2"
                   sideOffset={5}
                 >
                   {data.dropdown_links.map(({ link, label }) => {
