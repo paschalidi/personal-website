@@ -85,15 +85,16 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
               spaceBetween={10}
               slidesPerView={1}
               navigation
-              className="swiper z-50 w-full sm:h-fit flex"
+              className="swiper z-50 w-full sm:h-fit"
             >
               {items.map(({ description, image }) => {
                 return (
                   <SwiperSlide key={asText(description)}>
                     <PrismicNextImage
                       field={image}
-                      // todo work this here h and width
-                      className={"max-h-[80vh] max-w-full object-contain m-auto"}
+                      className={
+                        "max-h-[80vh] max-w-full object-contain m-auto"
+                      }
                     />
                     <div className={"md:min-w-md m-auto mt-4"}>
                       <PrismicRichText

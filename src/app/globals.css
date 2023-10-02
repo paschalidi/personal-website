@@ -85,8 +85,8 @@ body {
 
 .swiper-wrapper {
   display: flex;
-  min-height: 90vh;
   align-items: center;
+  min-height: 90vh;
   @screen md {
     min-height: auto;
     align-items: end;
