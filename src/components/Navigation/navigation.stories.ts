@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Navigation } from "./inde";
+import { Navigation } from "./index";
 import mockData from "./story-mock.json";
 
 const meta = {

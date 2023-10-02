@@ -55,7 +55,9 @@ export default async function Page({ params }: { params: Params }) {
           </div>
         )}
         <div className={clsx("order-1 lg:order-2 lg:w-6/12 tracking-wider")}>
-          <PrismicRichText field={data.text} />
+          <div>
+            <PrismicRichText field={data.text} />
+          </div>
         </div>
       </div>
     </div>

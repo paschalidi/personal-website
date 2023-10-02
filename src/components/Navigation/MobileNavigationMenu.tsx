@@ -6,6 +6,7 @@ import { NavigationDocumentData, Simplify } from "../../../prismicio-types";
 import { Link } from "../Link";
 import clsx from "clsx";
 import "./MobileNavigationMenu.css";
+import { usePathname } from "next/navigation";
 
 export const MobileNavigationMenu = ({
   data,
@@ -13,6 +14,7 @@ export const MobileNavigationMenu = ({
   data: Simplify<NavigationDocumentData>;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isOpen) {
@@ -22,6 +24,9 @@ export const MobileNavigationMenu = ({
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
   return (
     <header>
       <nav className="relative flex w-full flex-wrap items-center justify-between py-2 h-[64px]">

@@ -5,7 +5,7 @@ import { PrismicPreview } from "@prismicio/next";
 
 import { repositoryName } from "../prismicio";
 import { ReactNode } from "react";
-import { Navigation } from "../components/Navigation/inde";
+import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 
 const inter = Inter({
