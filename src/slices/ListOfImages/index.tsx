@@ -1,5 +1,6 @@
 import { asText, Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { Fragment } from "react";
 
 /**
  * Props for `ListOfImages`.
@@ -14,21 +15,23 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className={
-        "flex flex-row flex-wrap gap-12 justify-center py-16 md:pt-24 pb-16"
-      }
+      className={"my-16 md:mt-24 mb-32"}
     >
-      {slice.items.map(({ description, image }) => {
-        return (
-          <div
-            key={asText(description)}
-            className={
-              "h-80 w-80 md:h-48 md:w-56 bg-cover bg-center bg-no-repeat"
-            }
-            style={{ backgroundImage: `url(${image.url})` }}
-          />
-        );
-      })}
+      <h1 className={"mb-12 text-zinc-700 text-2xl"}>{slice.primary.header}</h1>
+      <div className={"flex flex-row flex-wrap gap-12 justify-start"}>
+        {slice.items.map(({ description, image }) => {
+          return (
+            <Fragment key={asText(description)}>
+              <div
+                className={
+                  "h-80 w-80 md:h-48 md:w-56 bg-cover bg-center bg-no-repeat"
+                }
+                style={{ backgroundImage: `url(${image.url})` }}
+              />
+            </Fragment>
+          );
+        })}
+      </div>
     </section>
   );
 };

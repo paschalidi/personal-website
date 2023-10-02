@@ -9,45 +9,40 @@ body {
 
 @layer base {
   h1 {
-    @apply text-4xl;
+    @apply text-2xl;
   }
 
   @screen md {
     h1 {
-      @apply text-6xl;
+      @apply text-3xl;
     }
   }
 }
 
 @layer base {
   h2 {
-    @apply text-3xl;
+    @apply text-2xl;
   }
 
   @screen md {
     h2 {
-      @apply text-5xl;
+      @apply text-2xl;
     }
   }
 }
 
 @layer base {
   h3 {
-    @apply text-3xl;
+    @apply text-xl;
   }
 
   @screen md {
     h3 {
-      @apply text-4xl;
+      @apply text-xl;
     }
   }
 }
 
-@screen md {
-  .h3 {
-    @apply text-5xl;
-  }
-}
 
 /****** Page Container *******/
 .pc {

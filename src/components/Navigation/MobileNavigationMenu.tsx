@@ -70,16 +70,25 @@ export const MobileNavigationMenu = ({
                         </div>
                       </>
                     </div>
-                    <div>
-                      {data.links.map(({ link, label }, index: number) => {
+                    <div className={"flex flex-col gap-8 mt-12"}>
+                      {data.dropdown_links.map(({ link, label }) => {
                         return (
                           <Menubar.Item key={label}>
                             <Link
                               link={link}
-                              className={clsx(
-                                index === 0 && "mt-12",
-                                "mb-10 text-2xl text-zinc-600",
-                              )}
+                              className={clsx("text-2xl text-zinc-600")}
+                              text={label}
+                            />
+                          </Menubar.Item>
+                        );
+                      })}
+                      <hr />
+                      {data.links.map(({ link, label }) => {
+                        return (
+                          <Menubar.Item key={label}>
+                            <Link
+                              link={link}
+                              className={clsx("text-2xl text-zinc-600")}
                               text={label}
                             />
                           </Menubar.Item>

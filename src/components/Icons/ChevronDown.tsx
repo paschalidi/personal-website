@@ -4,8 +4,8 @@ export const ChevronDown = ({ className, ...props }: IconProps) => (
   <svg
     className={`fill-current ${className}`}
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width={16}
+    height={16}
     {...props}
   >
     <path
