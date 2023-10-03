@@ -18,7 +18,7 @@ export async function Footer() {
           </div>
           <div className={"flex flex-row justify-center items-center gap-3"}>
             {copyright_links.map(({ link, text }) => {
-              if (!link) return null;
+              if (!link.slug) return null;
               return (
                 <PrismicNextLink
                   key={text}
