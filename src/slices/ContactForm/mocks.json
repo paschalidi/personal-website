@@ -1,0 +1,103 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"background_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+					"width": 3344,
+					"height": 2509
+				},
+				"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+				"width": 3344,
+				"height": 2509,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"header": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aliquip aute esse velit enim aute dolor ea commodo veniam est. Tempor aliqua ad ea aute tempor eu ex laborum mollit culpa do qui ipsum enim. Ea est est eu nisi excepteur Lorem dolore laborum amet incididunt duis."
+						}
+					}
+				]
+			},
+			"form_header": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Voluptate non velit ea ipsum incididunt ex aute reprehenderit magna sint excepteur."
+						}
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "broke",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur amet laboris dolore exercitation laboris minim minim. Pariatur sint aliquip non fugiat mollit proident."
+						}
+					}
+				]
+			},
+			"location": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "In ea irure commodo occaecat do elit consectetur ut ea esse excepteur velit. Commodo pariatur incididunt aliquip ad Lorem incididunt aute non nisi fugiat mollit. Laborum exercitation nisi ullamco minim aute."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"field_id",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "common",
+							"type": "Text"
+						}
+					],
+					[
+						"placeholder",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "verb",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,12 +1,12 @@
 "use client"; // because of state
 import React, { useEffect, useState } from "react";
 import * as Menubar from "@radix-ui/react-menubar";
-import { Burger, Close } from "../Icons";
 import { NavigationDocumentData, Simplify } from "../../../prismicio-types";
 import { Link } from "../Link";
 import clsx from "clsx";
 import "./MobileNavigationMenu.css";
 import { usePathname } from "next/navigation";
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 export const MobileNavigationMenu = ({
   data,
@@ -45,7 +45,7 @@ export const MobileNavigationMenu = ({
               onClick={() => setIsOpen(!isOpen)}
               className="lg:py-2 lg:px-3 outline-none select-none"
             >
-              {isOpen ? <Close /> : <Burger />}
+              {isOpen ? <Cross1Icon /> : <HamburgerMenuIcon />}
             </Menubar.Trigger>
             {isOpen && (
               <Menubar.Portal>
@@ -70,7 +70,7 @@ export const MobileNavigationMenu = ({
                             />
                           </div>
                           <div onClick={() => setIsOpen(false)}>
-                            <Close className={"mr-1"} />
+                            <Cross1Icon className={"mr-1"} />
                           </div>
                         </div>
                       </>

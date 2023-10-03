@@ -40,6 +40,9 @@
             },
             "single_image": {
               "type": "SharedSlice"
+            },
+            "contact_form": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -11,12 +11,12 @@ export async function Footer() {
   return (
     <footer className="w-full py-4 pb-8T">
       <div className="w-full h-px bg-neutral-100 my-10 md:my-6"></div>
-      <div className="pc">
+      <div>
         <div className="flex flex-col justify-center items-center gap-4">
           <div className="text-zinc-600 text-sm font-normal leading-tight">
             {copyright_text}
           </div>
-          <div className={"flex flex-row justify-center items-center gap-2"}>
+          <div className={"flex flex-row justify-center items-center gap-3"}>
             {copyright_links.map(({ link, text }) => {
               return (
                 <PrismicNextLink

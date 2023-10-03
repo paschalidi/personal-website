@@ -1,7 +1,7 @@
 import React from "react";
-import { CheckRound } from "../Icons/CheckRound";
 import { ErrorMessage, Field } from "formik";
 import clsx from "clsx";
+import { CheckCircledIcon } from "@radix-ui/react-icons";
 
 interface InputProps {
   /*
@@ -73,7 +73,7 @@ export const FormInput = ({
       />
       {iconPosition === "left" && (
         <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-          <CheckRound
+          <CheckCircledIcon
             className={
               disabled ? "text-zinc-400 text-opacity-50" : "text-black"
             }
@@ -82,7 +82,7 @@ export const FormInput = ({
       )}
       {iconPosition === "right" && (
         <span className="absolute inset-y-0 right-0 flex items-center pr-2">
-          <CheckRound
+          <CheckCircledIcon
             className={
               disabled ? "text-zinc-400 text-opacity-50" : "text-black"
             }
