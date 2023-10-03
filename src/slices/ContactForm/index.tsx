@@ -130,7 +130,7 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
             </Form>
           </Formik>
 
-          <div className="mt-20 mb-28 gap-4 text-zinc-600">
+          <div className="mt-20 mb-28 text-zinc-600 flex flex-col gap-2">
             <div className={"flex flex-row gap-3 items-center"}>
               <InstagramLogoIcon />
               <PrismicRichText field={slice.primary.instageam} />
