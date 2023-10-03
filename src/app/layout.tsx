@@ -22,7 +22,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="pc pt-10 md:pt-14 overflow-x-hidden antialiased bg-neutral-100">
+      <body className="pc pt-10 md:pt-14 overflow-x-hidden antialiased bg-zinc-50">
         <NextTopLoader
           color="#111"
           initialPosition={0.08}

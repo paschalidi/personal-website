@@ -40,12 +40,12 @@ export const NavigationMenu = ({
               <Popover.Trigger asChild>
                 <div
                   className={clsx(
-                    "font-medium text-zinc-600 hover:text-zinc-800 text-md cursor-pointer",
+                    "font-medium text-zinc-700 hover:text-zinc-900 text-md cursor-pointer",
                   )}
                 >
                   <div className={"flex flex-row items-center"}>
                     {data.dropdown_links_header}{" "}
-                    <ChevronDownIcon className={"text-zinc-500"} />
+                    <ChevronDownIcon className={"text-zinc-700"} />
                   </div>
                 </div>
               </Popover.Trigger>
@@ -62,7 +62,7 @@ export const NavigationMenu = ({
                         text={label}
                         link={link}
                         size={"small"}
-                        className={"w-full flex text-zinc-500"}
+                        className={"w-full flex text-zinc-700"}
                       />
                     );
                   })}
@@ -74,7 +74,7 @@ export const NavigationMenu = ({
               return (
                 <Link
                   size={"small"}
-                  className={clsx("text-zinc-500")}
+                  className={clsx("text-zinc-700")}
                   key={label}
                   link={link}
                   text={label}
