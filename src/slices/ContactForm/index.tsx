@@ -104,7 +104,7 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
             </Form>
           </Formik>
 
-          <div className="mt-20 mb-28 gap-4">
+          <div className="mt-20 mb-28 gap-4 text-zinc-600">
             <PrismicRichText field={slice.primary.email} />
             <PrismicRichText field={slice.primary.location} />
           </div>
