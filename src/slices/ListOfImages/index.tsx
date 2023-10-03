@@ -37,7 +37,6 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
   );
 
   useEffect(() => {
-    setIsLoading(true);
     setItems(rearrangeArray(slice.items, indexOfOpenedImage));
     setIsLoading(false);
   }, [indexOfOpenedImage, slice.items]);
@@ -46,10 +45,10 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className={"my-16 md:mt-24 mb-32"}
+      className={"my-16 md:mt-28 mb-40"}
     >
       <Dialog.Root>
-        <h1 className={"mb-12 text-zinc-700 text-2xl"}>
+        <h1 className={"mb-12 text-zinc-700 text-3xl"}>
           {slice.primary.header}
         </h1>
         <div
@@ -64,6 +63,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
                   asChild
                   key={asText(description)}
                   onClick={() => {
+                    setIsLoading(true);
                     setIndexOfOpenedImage(index);
                   }}
                 >

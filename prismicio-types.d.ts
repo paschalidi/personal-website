@@ -411,6 +411,16 @@ export interface ContactFormSliceDefaultPrimary {
   button_text: prismic.KeyTextField;
 
   /**
+   * instagram field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.instageam
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  instageam: prismic.RichTextField;
+
+  /**
    * email field in *ContactForm → Primary*
    *
    * - **Field Type**: Rich Text

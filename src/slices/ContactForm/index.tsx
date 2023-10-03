@@ -7,7 +7,12 @@ import { PrismicRichText } from "../../components/PrismicRichText";
 import * as Yup from "yup";
 import { FormInput } from "../../components/Form/FormInput";
 import { Button } from "../../components/Button";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import {
+  ArrowRightIcon,
+  DrawingPinFilledIcon, DrawingPinIcon,
+  EnvelopeClosedIcon, GlobeIcon,
+  InstagramLogoIcon,
+} from "@radix-ui/react-icons";
 
 const ContactFormSchema = Yup.object().shape({
   first_name: Yup.string()
@@ -126,8 +131,18 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
           </Formik>
 
           <div className="mt-20 mb-28 gap-4 text-zinc-600">
-            <PrismicRichText field={slice.primary.email} />
-            <PrismicRichText field={slice.primary.location} />
+            <div className={"flex flex-row gap-3 items-center"}>
+              <InstagramLogoIcon />
+              <PrismicRichText field={slice.primary.instageam} />
+            </div>
+            <div className={"flex flex-row gap-3 items-center"}>
+              <EnvelopeClosedIcon />
+              <PrismicRichText field={slice.primary.email} />
+            </div>
+            <div className={"flex flex-row gap-3 items-center"}>
+              <GlobeIcon />
+              <PrismicRichText field={slice.primary.location} />
+            </div>
           </div>
         </div>
       </div>

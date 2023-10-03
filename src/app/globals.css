@@ -4,7 +4,7 @@
 
 body {
   font-weight: 300;
-  @apply tracking-widest;
+  @apply tracking-wider;
 }
 
 @layer base {

@@ -45,13 +45,22 @@
             "placeholder": ""
           }
         },
+        "instageam": {
+          "type": "StructuredText",
+          "config": {
+            "label": "instagram",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,hyperlink"
+          }
+        },
         "email": {
           "type": "StructuredText",
           "config": {
             "label": "email",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph,hyperlink"
           }
         },
         "location": {
