@@ -9,8 +9,8 @@ import { FormInput } from "../../components/Form/FormInput";
 import { Button } from "../../components/Button";
 import {
   ArrowRightIcon,
-  DrawingPinFilledIcon, DrawingPinIcon,
-  EnvelopeClosedIcon, GlobeIcon,
+  EnvelopeClosedIcon,
+  GlobeIcon,
   InstagramLogoIcon,
 } from "@radix-ui/react-icons";
 
