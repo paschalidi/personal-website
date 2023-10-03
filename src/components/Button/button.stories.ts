@@ -27,4 +27,3 @@ export const Secondary: Story = {
     primary: false,
   },
 };
-
