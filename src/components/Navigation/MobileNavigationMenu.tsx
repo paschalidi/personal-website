@@ -42,6 +42,7 @@ export const MobileNavigationMenu = ({
         <Menubar.Root className="flex p-[3px]">
           <Menubar.Menu>
             <Menubar.Trigger
+              aria-label="button"
               aria-labelledby="Hamburger button, which opens the mobile navigation menu"
               onClick={() => setIsOpen(!isOpen)}
               className="lg:py-2 lg:px-3 outline-none select-none"
