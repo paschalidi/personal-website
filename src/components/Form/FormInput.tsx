@@ -66,8 +66,8 @@ export const FormInput = ({
           iconPosition === "right" && "pr-8",
           disabled
             ? "placeholder-zinc-400"
-            : "placeholder-black hover:shadow-[0_0_0_1px_black]",
-          `resize-none w-full h-14 px-4 py-3 bg-gray-100 rounded-lg justify-start items-center inline-flex text-xl font-normal leading-7 outline-none focus:shadow-[0_0_0_1px_black] selection:color-white selection:bg-blackA9`,
+            : "placeholder-zinc-600 hover:shadow-[0_0_0_1px_black]",
+          `border border-zinc-400 resize-none w-full h-14 px-4 py-3 bg-gray-100 rounded-md justify-start items-center inline-flex text-xl font-normal leading-7 outline-none focus:shadow-[0_0_0_1px_black] selection:color-white selection:bg-blackA9`,
         )}
         required={required}
       />

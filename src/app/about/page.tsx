@@ -39,12 +39,12 @@ export default async function Page({ params }: { params: Params }) {
     <div className="pt-12 pb-10 md:pt-28">
       <div
         className={clsx(
-          "flex flex-col lg:flex-row gap-12 lg:gap-24 leading-snug justify-between",
+          "flex flex-col lg:flex-row gap-12 lg:gap-24 leading-snug justify-between xl:items-center",
         )}
       >
         {prismic.isFilled.image(data.image) && (
           <div
-            className={clsx("order-2 lg:order-1 lg:w-6/12 xl:w-4/12")}
+            className={clsx("order-2 lg:order-1 max-w-sm lg:w-6/12 xl:w-4/12")}
             style={{ backgroundImage: `url(${data.image})` }}
           >
             <PrismicNextImage
@@ -56,7 +56,7 @@ export default async function Page({ params }: { params: Params }) {
         )}
         <div
           className={clsx(
-            "order-1 lg:order-2 lg:w-5/12 xl:w-6/12 tracking-wider",
+            "order-1 lg:order-2 lg:w-7/12 xl:w-6/12 tracking-wider",
           )}
         >
           <div>

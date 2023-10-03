@@ -14,7 +14,7 @@ const defaultComponents: JSXMapSerializer = {
     <h6 className="text-lg md:text-xl mb-4">{children}</h6>
   ),
   paragraph: ({ children }) => (
-    <p className="text-xl md:text-2xl mb-4 last:mb-0">{children}</p>
+    <p className="text-md md:text-lg mb-4 last:mb-0">{children}</p>
   ),
   oList: ({ children }) => (
     <ol className="mb-7 pl-4 last:mb-0 md:pl-6">{children}</ol>
