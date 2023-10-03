@@ -44,8 +44,8 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className={"flex flex-col md:flex-row mt-45"}>
-        <div className={"pc flex flex-col w-full md:5/12 pt-10 md:pt-20"}>
+      <div className={"mt-45"}>
+        <div className={"flex flex-col w-full max-w-xl pt-10 md:pt-20 m-auto"}>
           <div className="mb-6 flex flex-row ">
             <PrismicRichText field={slice.primary.form_header} />
           </div>

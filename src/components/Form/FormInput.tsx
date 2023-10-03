@@ -61,7 +61,7 @@ export const FormInput = ({
         placeholder={placeholder}
         className={clsx(
           className,
-          type === "textarea" && "h-28",
+          type === "textarea" && "h-40",
           iconPosition === "left" && "pl-10",
           iconPosition === "right" && "pr-8",
           disabled
