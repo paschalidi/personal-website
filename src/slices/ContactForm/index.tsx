@@ -2,7 +2,7 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { Form, Formik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { PrismicRichText } from "../../components/PrismicRichText";
 import * as Yup from "yup";
 import { FormInput } from "../../components/Form/FormInput";
@@ -36,6 +36,9 @@ export type ContactFormProps = SliceComponentProps<Content.ContactFormSlice>;
  * Component for "ContactForm" Slices.
  */
 const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [hasError, setHasError] = useState(null);
+  const [isFormSubmissionSuccess, setIsFormSubmissionSuccess] = useState(false);
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -58,11 +61,21 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
               message: "",
             }}
             onSubmit={async (values, formikHelpers) => {
-              await fetch("/api/email", {
-                method: "POST",
-                body: JSON.stringify(values),
-              });
-              formikHelpers.resetForm();
+              try {
+                setIsFormLoading(true);
+                setIsFormSubmissionSuccess(false);
+                setHasError(false);
+                await fetch("/api/email", {
+                  method: "POST",
+                  body: JSON.stringify(values),
+                });
+                formikHelpers.resetForm();
+                setIsFormSubmissionSuccess(true);
+              } catch (e) {
+                setHasError(true);
+              } finally {
+                setIsFormLoading(false);
+              }
             }}
           >
             <Form className="flex flex-col gap-6 max-w-[548px]">
@@ -95,8 +108,16 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
                   </div>
                 ))}
               </div>
-
+              {hasError && (
+                <div className={"text-red-400"}>
+                  {slice.primary.error_message}
+                </div>
+              )}
+              {isFormSubmissionSuccess && (
+                <div className={"text"}>{slice.primary.success_message}</div>
+              )}
               <Button
+                disabled={isFormLoading}
                 type="submit"
                 text={slice.primary.button_text}
                 icon={ArrowRightIcon}

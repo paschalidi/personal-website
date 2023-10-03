@@ -31,12 +31,15 @@ export type ListOfImagesProps = SliceComponentProps<Content.ListOfImagesSlice>;
  */
 const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
   const [indexOfOpenedImage, setIndexOfOpenedImage] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [items, setItems] = useState<Content.ListOfImagesSlice["items"]>(
     slice.items,
   );
 
   useEffect(() => {
+    setIsLoading(true);
     setItems(rearrangeArray(slice.items, indexOfOpenedImage));
+    setIsLoading(false);
   }, [indexOfOpenedImage, slice.items]);
 
   return (
@@ -54,24 +57,25 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
             "flex flex-col md:flex-row md:flex-wrap gap-12 justify-start"
           }
         >
-          {slice.items.map(({ description, image }, index) => {
-            return (
-              <Dialog.Trigger
-                asChild
-                key={asText(description)}
-                onClick={() => {
-                  setIndexOfOpenedImage(index);
-                }}
-              >
-                <div
-                  className={
-                    "h-96 w-full md:h-48 md:w-56 bg-cover bg-center bg-no-repeat"
-                  }
-                  style={{ backgroundImage: `url(${image.url})` }}
-                />
-              </Dialog.Trigger>
-            );
-          })}
+          {!isLoading &&
+            slice.items.map(({ description, image }, index) => {
+              return (
+                <Dialog.Trigger
+                  asChild
+                  key={asText(description)}
+                  onClick={() => {
+                    setIndexOfOpenedImage(index);
+                  }}
+                >
+                  <div
+                    className={
+                      "h-96 w-full md:h-48 md:w-56 bg-cover bg-center bg-no-repeat"
+                    }
+                    style={{ backgroundImage: `url(${image.url})` }}
+                  />
+                </Dialog.Trigger>
+              );
+            })}
         </div>
         <Dialog.Portal>
           <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0" />

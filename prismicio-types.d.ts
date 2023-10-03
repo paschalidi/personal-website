@@ -429,6 +429,26 @@ export interface ContactFormSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   location: prismic.RichTextField;
+
+  /**
+   * Success message field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.success_message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  success_message: prismic.KeyTextField;
+
+  /**
+   * Error message field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.error_message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  error_message: prismic.KeyTextField;
 }
 
 /**

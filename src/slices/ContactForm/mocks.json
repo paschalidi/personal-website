@@ -74,6 +74,16 @@
 						}
 					}
 				]
+			},
+			"success_message": {
+				"__TYPE__": "FieldContent",
+				"value": "zebra",
+				"type": "Text"
+			},
+			"error_message": {
+				"__TYPE__": "FieldContent",
+				"value": "let",
+				"type": "Text"
 			}
 		},
 		"items": [
