@@ -30,16 +30,7 @@ export type ListOfImagesProps = SliceComponentProps<Content.ListOfImagesSlice>;
  * Component for "ListOfImages" Slices.
  */
 const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
-  const [indexOfOpenedImage, setIndexOfOpenedImage] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [items, setItems] = useState<Content.ListOfImagesSlice["items"]>(
-    slice.items,
-  );
-
-  useEffect(() => {
-    setItems(rearrangeArray(slice.items, indexOfOpenedImage));
-    setIsLoading(false);
-  }, [indexOfOpenedImage, slice.items]);
 
   return (
     <section
@@ -59,17 +50,10 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
           {!isLoading &&
             slice.items.map(({ description, image }, index) => {
               return (
-                <Dialog.Trigger
-                  asChild
-                  key={asText(description)}
-                  onClick={() => {
-                    setIsLoading(true);
-                    setIndexOfOpenedImage(index);
-                  }}
-                >
+                <Dialog.Trigger asChild key={asText(description)}>
                   <div
                     className={
-                      "h-96 w-full md:h-48 md:w-56 bg-cover bg-center bg-no-repeat"
+                      "h-96 w-full md:h-60 md:w-56 bg-contain bg-center bg-no-repeat"
                     }
                     style={{ backgroundImage: `url(${image.url})` }}
                   />
@@ -91,7 +75,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
               navigation
               className="swiper z-50 w-full sm:h-fit"
             >
-              {items.map(({ description, image }) => {
+              {slice.items.map(({ description, image }) => {
                 return (
                   <SwiperSlide key={asText(description)}>
                     <PrismicNextImage

@@ -9,8 +9,8 @@ export async function Footer() {
   const { copyright_links, copyright_text } = data;
 
   return (
-    <footer className="w-full py-4 pb-8T">
-      <div className="w-full h-px bg-neutral-100 my-10 md:my-6"></div>
+    <footer className="w-full py-4 pb-4">
+      <hr className="w-full h-px my-10 md:my-6"></hr>
       <div>
         <div className="flex flex-col justify-center items-center gap-4">
           <div className="text-zinc-600 text-sm font-normal leading-tight">
