@@ -10,7 +10,7 @@ import { A11y, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { PrismicRichText } from "../../components/PrismicRichText";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const rearrangeArray = (
   arr: Content.ListOfImagesSlice["items"],
@@ -30,7 +30,17 @@ export type ListOfImagesProps = SliceComponentProps<Content.ListOfImagesSlice>;
  * Component for "ListOfImages" Slices.
  */
 const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
+  const [indexOfOpenedImage, setIndexOfOpenedImage] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [items, setItems] = useState<Content.ListOfImagesSlice["items"]>(
+    slice.items,
+  );
+
+  useEffect(() => {
+    setIsLoading(true);
+    setItems(rearrangeArray(slice.items, indexOfOpenedImage));
+    setIsLoading(false);
+  }, [indexOfOpenedImage, slice.items]);
 
   return (
     <section
@@ -42,27 +52,27 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
         <h1 className={"mb-12 text-zinc-700 text-3xl"}>
           {slice.primary.header}
         </h1>
-        <div
-          className={
-            "flex flex-col md:flex-row md:flex-wrap gap-12 justify-start"
-          }
-        >
-          {!isLoading &&
-            slice.items.map(({ description, image }, index) => {
-              return (
-                <Dialog.Trigger asChild key={asText(description)}>
+        <div className={"flex flex-wrap gap-8 justify-start items-center"}>
+          {slice.items.map(({ description, image }, index) => {
+            return (
+              <Dialog.Trigger asChild key={asText(description)}>
+                <div className={"w-full sm:w-[30%] lg:w-[22%]"}>
                   <PrismicNextImage
                     field={image}
+                    onClick={() => {
+                      setIndexOfOpenedImage(index);
+                    }}
                     className={
-                      "w-1/6 min-h-[200px] transition-opacity opacity-0 duration-300"
+                      "w-full h-auto transition-opacity opacity-0 duration-300"
                     }
                     onLoadingComplete={(image) => {
                       image.classList.remove("opacity-0");
                     }}
                   />
-                </Dialog.Trigger>
-              );
-            })}
+                </div>
+              </Dialog.Trigger>
+            );
+          })}
         </div>
         <Dialog.Portal>
           <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0" />
@@ -78,34 +88,35 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
               navigation
               className="swiper z-50 w-full sm:h-fit"
             >
-              {slice.items.map(({ description, image }) => {
-                return (
-                  <SwiperSlide key={asText(description)}>
-                    <PrismicNextImage
-                      field={image}
-                      className={
-                        "max-h-[80vh] max-w-full object-contain m-auto "
-                      }
-                    />
-                    <div className={"md:min-w-md m-auto mt-4"}>
-                      <PrismicRichText
-                        field={description}
-                        components={{
-                          paragraph: ({ children }) => (
-                            <p
-                              className={
-                                "text-center text-zinc-600 text-sm leading-1"
-                              }
-                            >
-                              {children}
-                            </p>
-                          ),
-                        }}
+              {!isLoading &&
+                items.map(({ description, image }) => {
+                  return (
+                    <SwiperSlide key={asText(description)}>
+                      <PrismicNextImage
+                        field={image}
+                        className={
+                          "max-h-[80vh] max-w-full object-contain m-auto "
+                        }
                       />
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
+                      <div className={"md:min-w-md m-auto mt-4"}>
+                        <PrismicRichText
+                          field={description}
+                          components={{
+                            paragraph: ({ children }) => (
+                              <p
+                                className={
+                                  "text-center text-zinc-600 text-sm leading-1"
+                                }
+                              >
+                                {children}
+                              </p>
+                            ),
+                          }}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
             </Swiper>
 
             <Dialog.Close asChild>
