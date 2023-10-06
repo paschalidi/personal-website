@@ -93,3 +93,28 @@ body {
   }
 }
 
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      @apply gap-2;
+      column-count: 1;
+    }
+
+    .masonry-sm {
+      @apply gap-2;
+      column-count: 2;
+    }
+
+    .masonry-md {
+      @apply gap-4;
+      column-count: 4;
+    }
+
+    .break-inside {
+      @apply mb-4;
+      break-inside: avoid;
+      @apply cursor-pointer;
+    }
+
+  }
+}

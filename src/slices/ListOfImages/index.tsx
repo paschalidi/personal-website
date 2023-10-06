@@ -52,19 +52,19 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
         <h1 className={"mb-12 text-zinc-700 text-3xl"}>
           {slice.primary.header}
         </h1>
-        <div className={"flex flex-wrap gap-8 justify-between items-center"}>
+        <div className={"masonry sm:masonry-sm md:masonry-md"}>
           {slice.items.map(({ description, image }, index) => {
             return (
               <Dialog.Trigger asChild key={asText(description)}>
-                <div className={"w-full sm:w-[30%] lg:w-[22%]"}>
+                <div className={"break-inside"}>
                   <PrismicNextImage
+                    width={image.dimensions.width}
+                    height={image.dimensions.height}
                     field={image}
                     onClick={() => {
                       setIndexOfOpenedImage(index);
                     }}
-                    className={
-                      "w-full h-auto transition-opacity opacity-0 duration-100"
-                    }
+                    className={"transition-opacity opacity-0 duration-100"}
                     onLoadingComplete={(image) => {
                       image.classList.remove("opacity-0");
                     }}
