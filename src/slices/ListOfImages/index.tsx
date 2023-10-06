@@ -10,7 +10,7 @@ import { A11y, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { PrismicRichText } from "../../components/PrismicRichText";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const rearrangeArray = (
   arr: Content.ListOfImagesSlice["items"],
@@ -51,11 +51,14 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
             slice.items.map(({ description, image }, index) => {
               return (
                 <Dialog.Trigger asChild key={asText(description)}>
-                  <div
+                  <PrismicNextImage
+                    field={image}
                     className={
-                      "h-96 w-full md:h-60 md:w-56 bg-contain bg-center bg-no-repeat"
+                      "w-1/6 min-h-[200px] transition-opacity opacity-0 duration-300"
                     }
-                    style={{ backgroundImage: `url(${image.url})` }}
+                    onLoadingComplete={(image) => {
+                      image.classList.remove("opacity-0");
+                    }}
                   />
                 </Dialog.Trigger>
               );
@@ -81,7 +84,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
                     <PrismicNextImage
                       field={image}
                       className={
-                        "max-h-[80vh] max-w-full object-contain m-auto"
+                        "max-h-[80vh] max-w-full object-contain m-auto "
                       }
                     />
                     <div className={"md:min-w-md m-auto mt-4"}>
