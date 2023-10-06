@@ -52,7 +52,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
         <h1 className={"mb-12 text-zinc-700 text-3xl"}>
           {slice.primary.header}
         </h1>
-        <div className={"flex flex-wrap gap-8 justify-start items-center"}>
+        <div className={"flex flex-wrap gap-8 justify-between items-center"}>
           {slice.items.map(({ description, image }, index) => {
             return (
               <Dialog.Trigger asChild key={asText(description)}>
@@ -63,7 +63,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
                       setIndexOfOpenedImage(index);
                     }}
                     className={
-                      "w-full h-auto transition-opacity opacity-0 duration-300"
+                      "w-full h-auto transition-opacity opacity-0 duration-100"
                     }
                     onLoadingComplete={(image) => {
                       image.classList.remove("opacity-0");
