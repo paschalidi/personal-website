@@ -63,6 +63,13 @@
           "placeholder": "A brief summary of the page"
         }
       },
+      "meta_keywords": {
+        "type": "Text",
+        "config": {
+          "label": "Meta keywords",
+          "placeholder": ""
+        }
+      },
       "meta_image": {
         "type": "Image",
         "config": {
