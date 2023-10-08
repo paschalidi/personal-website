@@ -14,11 +14,9 @@ import { useEffect, useState } from "react";
 
 const rearrangeArray = (
   arr: Content.ListOfImagesSlice["items"],
-  index: number,
+  startIndex: number,
 ) => {
-  const before = arr.slice(0, index);
-  const after = arr.slice(index);
-  return after.concat(before);
+  return [...arr.slice(startIndex), ...arr.slice(0, startIndex)];
 };
 
 /**
@@ -56,7 +54,15 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
           {slice.items.map(({ description, image }, index) => {
             return (
               <Dialog.Trigger asChild key={asText(description)}>
-                <div className={"break-inside"}>
+                <div
+                  role="button"
+                  tabIndex={0}
+                  className="break-inside"
+                  aria-haspopup="dialog"
+                  aria-expanded="false"
+                  aria-controls="radix-:Rddcta:"
+                  aria-label="Open dialog"
+                >
                   <PrismicNextImage
                     width={image.dimensions.width}
                     height={image.dimensions.height}
