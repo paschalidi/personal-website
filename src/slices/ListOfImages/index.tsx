@@ -44,7 +44,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className={"my-16 md:mt-28 mb-40"}
+      className={"my-16 md:mt-28 mb-32 md:mb-40"}
     >
       <Dialog.Root>
         <h1 className={"mb-12 text-zinc-700 text-3xl"}>

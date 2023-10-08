@@ -47,7 +47,11 @@ export const MobileNavigationMenu = ({
               onClick={() => setIsOpen(!isOpen)}
               className="lg:py-2 lg:px-3 outline-none select-none"
             >
-              {isOpen ? <Cross1Icon /> : <HamburgerMenuIcon />}
+              {isOpen ? (
+                <Cross1Icon width={24} height={24} />
+              ) : (
+                <HamburgerMenuIcon width={24} height={24} />
+              )}
             </Menubar.Trigger>
             {isOpen && (
               <Menubar.Portal>
@@ -72,7 +76,11 @@ export const MobileNavigationMenu = ({
                             />
                           </div>
                           <div onClick={() => setIsOpen(false)}>
-                            <Cross1Icon className={"mr-1"} />
+                            <Cross1Icon
+                              width={24}
+                              height={24}
+                              className={"mr-1"}
+                            />
                           </div>
                         </div>
                       </>
