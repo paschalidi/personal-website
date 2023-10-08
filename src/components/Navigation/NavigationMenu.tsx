@@ -43,10 +43,16 @@ export const NavigationMenu = ({
                     "font-medium text-zinc-700 hover:text-zinc-900 text-md cursor-pointer",
                   )}
                 >
-                  <div className={"flex flex-row items-center"}>
+                  <button
+                    className={"flex flex-row items-center"}
+                    aria-haspopup="dialog"
+                    aria-expanded={isMenuOpen}
+                    aria-controls="radix-:R1ila:"
+                    data-state={isMenuOpen ? "opened" : "closed"}
+                  >
                     {data.dropdown_links_header}{" "}
                     <ChevronDownIcon className={"text-zinc-700"} />
-                  </div>
+                  </button>
                 </div>
               </Popover.Trigger>
               <Popover.Portal>
