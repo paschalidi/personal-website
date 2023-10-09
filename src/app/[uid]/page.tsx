@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: Params }) {
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams({ locales }: { locales: string[]}) {
   const client = createClient();
 
   const pages = await client.getAllByType("page");
