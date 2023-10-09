@@ -112,6 +112,8 @@ export const Button = ({
               {_iconPosition === "left" && Icon && (
                 <div className={"text-center mr-2"}>
                   <Icon
+                    width={18}
+                    height={18}
                     className={`fill-current ${clsx(
                       iconWhite
                         ? "text-white"
