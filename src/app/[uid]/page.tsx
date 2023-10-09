@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { asText } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
 import { createClient } from "../../prismicio";
 import { components } from "../../slices";
@@ -49,7 +48,7 @@ export default async function Page({ params }: { params: Params }) {
   );
 }
 
-export async function generateStaticParams({ locales }: { locales: string[]}) {
+export async function generateStaticParams({ locales }: { locales: string[] }) {
   const client = createClient();
 
   const pages = await client.getAllByType("page");
