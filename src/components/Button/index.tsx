@@ -40,7 +40,7 @@ type ButtonProps = {
   /**
    * The icon component itself
    */
-  icon?: ComponentType<{ className: string }>;
+  icon?: ComponentType<{ className: string; width: number; height: number }>;
   /**
    * The icon color is white
    */
@@ -116,7 +116,7 @@ export const Button = ({
                       iconWhite
                         ? "text-white"
                         : primary
-                        ? "text-green-400"
+                        ? "text-zinc-300"
                         : "text-black",
                     )}`}
                   />
@@ -129,11 +129,13 @@ export const Button = ({
                 <div className={"text-center ml-2"}>
                   {Icon && (
                     <Icon
+                      width={18}
+                      height={18}
                       className={`fill-current ${clsx(
                         iconWhite
                           ? "text-white"
                           : primary
-                          ? "text-green-400"
+                          ? "text-zinc-200 "
                           : "text-black",
                       )}`}
                     />
