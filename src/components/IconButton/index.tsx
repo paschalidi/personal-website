@@ -1,4 +1,3 @@
-"use client";
 import React, { ComponentType } from "react";
 import clsx from "clsx";
 

@@ -1,9 +1,7 @@
-"use client";
 import { PrismicNextLink } from "@prismicio/next";
 import React from "react";
 import { FooterDocumentData, Simplify } from "../../../prismicio-types";
 import { Locales } from "../../utils/getLocales";
-import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { IconButton } from "../IconButton";
 import { getSocialIcon } from "../../utils/socialMediaSvgList";
@@ -20,7 +18,6 @@ export async function Footer({
   data: Simplify<FooterDocumentData>;
   locales: Locales;
 }) {
-  const pathname = usePathname();
   const { copyright_text, copyright_links } = data;
 
   return (
@@ -42,11 +39,11 @@ export async function Footer({
             ))}
           </div>
 
-          <ul className="flex flex-wrap gap-2 text-xs items-center">
+          <ul className="flex flex-wrap gap-2 text-sm items-center">
             {locales.map((locale, index) => (
               <li key={locale.lang}>
                 <PrismicNextLink
-                  className={clsx(index === 0 && "underline font-medium")}
+                  className={clsx(index === 0 && "underline font-semibold")}
                   href={locale.url}
                   locale={locale.lang}
                   aria-label={`Change language to ${locale.lang_name}`}
