@@ -217,30 +217,20 @@ export interface NavigationDocumentDataDropdownLinksItem {
   link: prismic.LinkField;
 
   /**
-   * Label field in *Navigation → Dropdown Links*
+   * label field in *Navigation → Dropdown Links*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: navigation.dropdown_links[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  label: prismic.KeyTextField;
+  label: prismic.RichTextField;
 }
 
 /**
  * Item in *Navigation → Links*
  */
 export interface NavigationDocumentDataLinksItem {
-  /**
-   * Label field in *Navigation → Links*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: Optional - Label for the link
-   * - **API ID Path**: navigation.links[].label
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  label: prismic.TitleField;
-
   /**
    * Link field in *Navigation → Links*
    *
@@ -250,6 +240,16 @@ export interface NavigationDocumentDataLinksItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Label field in *Navigation → Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
 }
 
 /**

@@ -40,11 +40,15 @@ export default async function Page({ params }) {
     .catch(() => {
       return notFound();
     });
+  const { data: navigation } = await client.getSingle("navigation", {
+    lang: params.lang,
+  });
 
   const locales = await getLocales(page, client);
+
   return (
     <>
-      <Layout locales={locales}>
+      <Layout locales={locales} navigation={navigation}>
         <SliceZone
           slices={page.data.slices}
           components={components}

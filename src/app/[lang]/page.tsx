@@ -31,9 +31,12 @@ export default async function Page({ params: { lang } }) {
   const page = await client.getByUID("page", "home", { lang }).catch(() => {
     return notFound();
   });
+  const { data: navigation } = await client.getSingle("navigation", {
+    lang,
+  });
   const locales = await getLocales(page, client);
   return (
-    <Layout locales={locales}>
+    <Layout navigation={navigation} locales={locales}>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );

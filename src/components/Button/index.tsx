@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { PrismicText } from "@prismicio/react";
 import { LinkField, RichTextField } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
+import { IconProps } from "@radix-ui/react-icons/dist/types";
 
 type ButtonProps = {
   /**
@@ -40,7 +41,9 @@ type ButtonProps = {
   /**
    * The icon component itself
    */
-  icon?: ComponentType<{ className: string; width: number; height: number }>;
+  icon?: React.ForwardRefExoticComponent<
+    IconProps & React.RefAttributes<SVGSVGElement>
+  >;
   /**
    * The icon color is white
    */

@@ -1,13 +1,14 @@
-import { createClient } from "../../prismicio";
 import { NavigationMenu } from "./NavigationMenu";
 import clsx from "clsx";
 import { MobileNavigationMenu } from "./MobileNavigationMenu";
 import React from "react";
+import { NavigationDocumentData, Simplify } from "../../../prismicio-types";
 
-export async function SSRNavigation() {
-  const client = createClient();
-  const { data } = await client.getSingle("navigation");
-
+export async function SSRNavigation({
+  data,
+}: {
+  data: Simplify<NavigationDocumentData>;
+}) {
   return (
     <div className="relative z-20">
       <div className={"hidden md:block"}>

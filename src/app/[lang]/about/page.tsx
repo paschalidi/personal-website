@@ -29,18 +29,19 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function Page({ params }) {
+export default async function Page({ params: { lang } }) {
   const client = createClient();
-  const page = await client
-    .getSingle("about", { lang: params.lang })
-    .catch(() => {
-      return notFound();
-    });
+  const page = await client.getSingle("about", { lang }).catch(() => {
+    return notFound();
+  });
   const { data } = page;
+  const { data: navigation } = await client.getSingle("navigation", {
+    lang,
+  });
   const locales = await getLocales(page, client);
 
   return (
-    <Layout locales={locales}>
+    <Layout navigation={navigation} locales={locales}>
       <div className="pt-12 pb-10 md:pt-28">
         <div
           className={clsx(

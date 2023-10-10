@@ -43,10 +43,12 @@
               }
             },
             "label": {
-              "type": "Text",
+              "type": "StructuredText",
               "config": {
-                "label": "Label",
-                "placeholder": ""
+                "label": "label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
             }
           }
@@ -57,21 +59,19 @@
         "config": {
           "label": "Links",
           "fields": {
-            "label": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Label",
-                "placeholder": "Optional - Label for the link",
-                "allowTargetBlank": false,
-                "single": "heading3"
-              }
-            },
             "link": {
               "type": "Link",
               "config": {
                 "label": "Link",
                 "placeholder": "Link for navigation item",
                 "select": null
+              }
+            },
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
               }
             }
           }

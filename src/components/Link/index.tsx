@@ -1,8 +1,8 @@
 import React, { ComponentType } from "react";
 import { PrismicNextLink } from "@prismicio/next";
-import { PrismicText } from "@prismicio/react";
 import { LinkField, RichTextField } from "@prismicio/client";
 import clsx from "clsx";
+import { PrismicRichText } from "../PrismicRichText";
 
 type CommonLinkProps = {
   /**
@@ -82,7 +82,7 @@ export const Link = ({
     <PrismicNextLink
       onClick={onClick}
       field={link}
-      className={clsx("flex items-center hover:text-zinc-800", className)}
+      className={clsx("flex items-center hover:text-black", className)}
     >
       {_iconPosition === "left" && <Icon className="text-green-400 mr-2" />}
 
@@ -94,10 +94,20 @@ export const Link = ({
             ? "text-3xl"
             : "text-md",
           primary ? "" : "text-white",
-          "font-medium ",
+          "font-medium group transition duration-300",
         )}
       >
-        {typeof text === "string" ? text : <PrismicText field={text} />}
+        {typeof text === "string" ? (
+          text
+        ) : (
+          <PrismicRichText
+            field={text}
+            components={{
+              paragraph: ({ children }) => <div>{children}</div>,
+            }}
+          />
+        )}
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-[2px] bg-black"></span>
       </div>
 
       {_iconPosition === "right" && (
