@@ -25,7 +25,7 @@ export async function Footer({
       <hr className="w-full h-px my-10 md:my-6"></hr>
       <div>
         <div className="flex flex-col justify-center items-center gap-4">
-          <div className="gap-4 flex flex-row">
+          <div className="gap-1 flex flex-row">
             {data.social_links.map(({ text, link, aria_text }) => (
               <PrismicNextLink key={text} field={link} target="_blank">
                 <IconButton
