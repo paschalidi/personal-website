@@ -35,6 +35,45 @@
             }
           }
         }
+      },
+      "social_links": {
+        "type": "Group",
+        "config": {
+          "label": "social links",
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "aria_text": {
+              "type": "Text",
+              "config": {
+                "label": "aria text",
+                "placeholder": ""
+              }
+            },
+            "text": {
+              "type": "Text",
+              "config": {
+                "label": "text",
+                "placeholder": ""
+              }
+            },
+            "svg_id": {
+              "type": "Select",
+              "config": {
+                "label": "svg id",
+                "placeholder": "",
+                "options": ["instagram", "email", "linkedin"],
+                "default_value": "instagram"
+              }
+            }
+          }
+        }
       }
     }
   }

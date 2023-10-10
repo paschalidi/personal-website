@@ -26,17 +26,6 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"header": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Aliquip aute esse velit enim aute dolor ea commodo veniam est. Tempor aliqua ad ea aute tempor eu ex laborum mollit culpa do qui ipsum enim. Ea est est eu nisi excepteur Lorem dolore laborum amet incididunt duis."
-						}
-					}
-				]
-			},
 			"form_header": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [

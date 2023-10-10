@@ -4,10 +4,9 @@ import clsx from "clsx";
 import { MobileNavigationMenu } from "./MobileNavigationMenu";
 import React from "react";
 
-export async function Navigation() {
+export async function SSRNavigation() {
   const client = createClient();
-  const navigation = await client.getSingle("navigation");
-  const { data } = navigation;
+  const { data } = await client.getSingle("navigation");
 
   return (
     <div className="relative z-20">

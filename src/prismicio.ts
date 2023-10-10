@@ -15,16 +15,16 @@ export const { repositoryName } = sm;
 const routes: ClientConfig["routes"] = [
   {
     type: "page",
-    path: "/:uid",
+    uid: "home",
+    path: "/:lang?",
   },
   {
     type: "page",
-    uid: "home",
-    path: "/",
+    path: "/:lang?/:uid",
   },
   {
     type: "about",
-    path: "/about",
+    path: "/:lang?/about",
   },
 ];
 

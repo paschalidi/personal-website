@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Navigation } from "./index";
+import { SSRNavigation } from "./index";
 import mockData from "./story-mock.json";
 
 const meta = {
   title: "Navigation",
-  component: Navigation,
+  component: SSRNavigation,
   parameters: {
     nextjs: { appDirectory: true },
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof Navigation>;
+} satisfies Meta<typeof SSRNavigation>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

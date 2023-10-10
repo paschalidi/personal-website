@@ -101,6 +101,52 @@ export interface FooterDocumentDataCopyrightLinksItem {
 }
 
 /**
+ * Item in *Footer → social links*
+ */
+export interface FooterDocumentDataSocialLinksItem {
+  /**
+   * link field in *Footer → social links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * aria text field in *Footer → social links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[].aria_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  aria_text: prismic.KeyTextField;
+
+  /**
+   * text field in *Footer → social links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
+   * svg id field in *Footer → social links*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: instagram
+   * - **API ID Path**: footer.social_links[].svg_id
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  svg_id: prismic.SelectField<"instagram" | "email" | "linkedin", "filled">;
+}
+
+/**
  * Content for Footer documents
  */
 interface FooterDocumentData {
@@ -127,6 +173,17 @@ interface FooterDocumentData {
   copyright_links: prismic.GroupField<
     Simplify<FooterDocumentDataCopyrightLinksItem>
   >;
+
+  /**
+   * social links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  social_links: prismic.GroupField<Simplify<FooterDocumentDataSocialLinksItem>>;
 }
 
 /**
@@ -294,17 +351,6 @@ interface PageDocumentData {
   title: prismic.TitleField;
 
   /**
-   * Parent field in *Page*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.parent
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  parent: prismic.ContentRelationshipField<"page">;
-
-  /**
    * Slice Zone field in *Page*
    *
    * - **Field Type**: Slice Zone
@@ -390,16 +436,6 @@ export interface ContactFormSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   background_image: prismic.ImageField<never>;
-
-  /**
-   * header field in *ContactForm → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact_form.primary.header
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  header: prismic.RichTextField;
 
   /**
    * form header field in *ContactForm → Primary*
@@ -525,71 +561,6 @@ type ContactFormSliceVariation = ContactFormSliceDefault;
 export type ContactFormSlice = prismic.SharedSlice<
   "contact_form",
   ContactFormSliceVariation
->;
-
-/**
- * Primary content in *HeroSimpleVersion → Primary*
- */
-export interface HeroSimpleVersionSliceDefaultPrimary {
-  /**
-   * Background image field in *HeroSimpleVersion → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_simple_version.primary.background_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  background_image: prismic.ImageField<never>;
-
-  /**
-   * Header field in *HeroSimpleVersion → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_simple_version.primary.header
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  header: prismic.TitleField;
-
-  /**
-   * Text field in *HeroSimpleVersion → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_simple_version.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  text: prismic.RichTextField;
-}
-
-/**
- * Default variation for HeroSimpleVersion Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroSimpleVersionSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<HeroSimpleVersionSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *HeroSimpleVersion*
- */
-type HeroSimpleVersionSliceVariation = HeroSimpleVersionSliceDefault;
-
-/**
- * HeroSimpleVersion Shared Slice
- *
- * - **API ID**: `hero_simple_version`
- * - **Description**: HeroSimpleVersion
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroSimpleVersionSlice = prismic.SharedSlice<
-  "hero_simple_version",
-  HeroSimpleVersionSliceVariation
 >;
 
 /**
@@ -722,6 +693,7 @@ declare module "@prismicio/client" {
       FooterDocument,
       FooterDocumentData,
       FooterDocumentDataCopyrightLinksItem,
+      FooterDocumentDataSocialLinksItem,
       NavigationDocument,
       NavigationDocumentData,
       NavigationDocumentDataDropdownLinksItem,
@@ -735,10 +707,6 @@ declare module "@prismicio/client" {
       ContactFormSliceDefaultItem,
       ContactFormSliceVariation,
       ContactFormSliceDefault,
-      HeroSimpleVersionSlice,
-      HeroSimpleVersionSliceDefaultPrimary,
-      HeroSimpleVersionSliceVariation,
-      HeroSimpleVersionSliceDefault,
       ListOfImagesSlice,
       ListOfImagesSliceDefaultPrimary,
       ListOfImagesSliceDefaultItem,
