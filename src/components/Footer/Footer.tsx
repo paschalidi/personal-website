@@ -11,7 +11,7 @@ export async function Footer({ data }: { data: Simplify<FooterDocumentData> }) {
     <footer className="w-full py-4 pb-4 mt-16">
       <div>
         <div className="flex flex-col justify-center items-center gap-4">
-          <div className="gap-1 flex flex-row">
+          <div className="gap-4 flex flex-row">
             {data.social_links.map(({ text, link, aria_text }) => (
               <PrismicNextLink key={text} field={link} target="_blank">
                 <IconButton
@@ -19,13 +19,13 @@ export async function Footer({ data }: { data: Simplify<FooterDocumentData> }) {
                   ariaLabel={aria_text}
                   key={text}
                   icon={getSocialIcon({ url: link.url })}
-                  iconClassname={"text-zinc-50"}
+                  iconClassname={"text-zinc-800"}
                 />
               </PrismicNextLink>
             ))}
           </div>
 
-          <div className="text-zinc-300 text-sm font-normal leading-tight">
+          <div className="text-zinc-400 text-sm font-normal leading-tight">
             {copyright_text}
           </div>
 

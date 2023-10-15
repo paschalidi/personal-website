@@ -56,7 +56,7 @@ export const IconButton = ({
       type="button"
       {...props}
       className={`
-            ${clsx(primary ? "bg-neutral-800" : "bg-white")} 
+            ${clsx(primary ? "bg-stone-300" : "bg-white")} 
             ${clsx(disabled && "bg-opacity-50")}
             ${clsx(
               size === "medium"
@@ -65,6 +65,13 @@ export const IconButton = ({
                 ? "w-7 h-7"
                 : "",
             )}
+            border-solid 
+            border-[1px]
+            border-stone-300
+            hover:border-white
+            transition-all
+            duration-200
+            hover:bg-white
             focus:ring-4 
             focus:outline-none 
             focus:ring-blue-300 
