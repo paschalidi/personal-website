@@ -33,7 +33,7 @@ export const MultiLanguageMenu = ({ locales }: { locales: Locales }) => {
         <Popover.Trigger asChild>
           <div
             className={clsx(
-              "font-medium text-md cursor-pointer text-zinc-300 flex flex-row items-center gap-1",
+              "font-medium text-md cursor-pointer text-zinc-300 flex flex-row items-center gap-1 hover:text-white",
             )}
           >
             {localeLabels[locales[0].lang].short}
