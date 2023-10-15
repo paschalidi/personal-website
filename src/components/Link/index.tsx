@@ -82,7 +82,7 @@ export const Link = ({
     <PrismicNextLink
       onClick={onClick}
       field={link}
-      className={clsx("flex items-center hover:text-black", className)}
+      className={clsx("flex items-center hover:text-white", className)}
     >
       {_iconPosition === "left" && <Icon className="text-green-400 mr-2" />}
 
@@ -107,7 +107,7 @@ export const Link = ({
             }}
           />
         )}
-        <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-[2px] bg-black"></span>
+        <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-[2px] bg-white"></span>
       </div>
 
       {_iconPosition === "right" && (

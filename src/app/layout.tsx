@@ -7,11 +7,6 @@ import NextTopLoader from "nextjs-toploader";
 import { repositoryName } from "../prismicio";
 import { ReactNode } from "react";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 export default async function RootLayout({
   children,
@@ -19,10 +14,10 @@ export default async function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="pc pt-6 sm:pt-10 md:pt-14 overflow-x-hidden antialiased bg-zinc-50">
+    <html lang="en">
+      <body className="pc pt-6 sm:pt-10 md:pt-14 overflow-x-hidden antialiased bg-stone-900">
         <NextTopLoader
-          color="#111"
+          color="#000"
           initialPosition={0.08}
           crawlSpeed={200}
           height={2}

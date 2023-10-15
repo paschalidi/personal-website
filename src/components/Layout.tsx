@@ -11,9 +11,9 @@ export const Layout: FC<{
 }> = ({ locales, children, navigation }) => {
   return (
     <div className="text-slate-800">
-      <SSRNavigation data={navigation} />
+      <SSRNavigation data={navigation} locales={locales} />
       <main>{children}</main>
-      <SSRFooter locales={locales} />
+      <SSRFooter />
     </div>
   );
 };

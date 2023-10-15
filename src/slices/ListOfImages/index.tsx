@@ -49,7 +49,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
         className={"my-16 md:mt-28 mb-32 md:mb-40"}
       >
         <Dialog.Root>
-          <h1 className={"mb-12 text-zinc-700 text-3xl"}>
+          <h1 className={"mb-12 text-zinc-300 text-3xl"}>
             {slice.primary.header}
           </h1>
           <div className={"masonry sm:masonry-sm md:masonry-md"}>
@@ -84,8 +84,8 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
           </div>
           <Dialog.Portal>
             <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0" />
-            <Dialog.Content className="z-50 data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] h-screen w-screen translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow focus:outline-none">
-              <Dialog.Title className="text-mauve12 m-0 text-[17px] font-medium">
+            <Dialog.Content className="z-50 data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] h-screen w-screen translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-stone-950 p-[25px] shadow focus:outline-none">
+              <Dialog.Title className="text-mauve12 m-0 text-[17px] font-medium text-zinc-300">
                 {slice.primary.header}
               </Dialog.Title>
               <Swiper
@@ -113,7 +113,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
                               paragraph: ({ children }) => (
                                 <p
                                   className={
-                                    "text-center text-zinc-600 text-sm leading-1"
+                                    "text-center text-zinc-400 text-sm leading-1"
                                   }
                                 >
                                   {children}

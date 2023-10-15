@@ -7,39 +7,49 @@ import { RichTextField } from "@prismicio/client";
 import React from "react";
 
 const defaultComponents: JSXMapSerializer = {
-  heading1: ({ children }) => <h1 className="mb-7">{children}</h1>,
-  heading2: ({ children }) => <h2>{children}</h2>,
-  heading3: ({ children }) => <h3 className="mb-4 lg:mb-6">{children}</h3>,
+  heading1: ({ children }) => (
+    <h1 className="mb-7 text-zinc-300">{children}</h1>
+  ),
+  heading2: ({ children }) => <h2 className={"text-zinc-300"}>{children}</h2>,
+  heading3: ({ children }) => (
+    <h3 className="mb-4 lg:mb-6 text-zinc-300">{children}</h3>
+  ),
   heading6: ({ children }) => (
-    <h6 className="text-lg md:text-xl mb-4">{children}</h6>
+    <h6 className="text-lg md:text-xl mb-4 text-zinc-300">{children}</h6>
   ),
   paragraph: ({ children }) => (
-    <p className="text-md md:text-lg mb-4 last:mb-0">{children}</p>
+    <p className="text-md md:text-lg mb-4 last:mb-0 text-zinc-300">
+      {children}
+    </p>
   ),
   oList: ({ children }) => (
-    <ol className="mb-7 pl-4 last:mb-0 md:pl-6">{children}</ol>
+    <ol className="mb-7 pl-4 last:mb-0 md:pl-6 text-zinc-300">{children}</ol>
   ),
   oListItem: ({ children }) => (
-    <li className="mb-1 list-decimal pl-1 last:mb-0 md:pl-2">{children}</li>
+    <li className="mb-1 list-decimal pl-1 last:mb-0 md:pl-2 text-zinc-300">
+      {children}
+    </li>
   ),
   list: ({ children }) => (
-    <ul className="mb-7 pl-4 last:mb-0 md:pl-6">{children}</ul>
+    <ul className="mb-7 pl-4 last:mb-0 md:pl-6 text-zinc-300">{children}</ul>
   ),
   listItem: ({ children }) => (
-    <li className="mb-1 list-disc pl-1 last:mb-0 md:pl-2">{children}</li>
+    <li className="mb-1 list-disc pl-1 last:mb-0 md:pl-2 text-zinc-300">
+      {children}
+    </li>
   ),
   preformatted: ({ children }) => (
-    <pre className="mb-7 rounded bg-slate-100 p-4 text-sm last:mb-0 md:p-8 md:text-lg">
+    <pre className="mb-7 rounded bg-slate-100 p-4 text-sm last:mb-0 md:p-8 md:text-lg text-zinc-300">
       <code>{children}</code>
     </pre>
   ),
   strong: ({ children }) => (
-    <strong className="font-semibold">{children}</strong>
+    <strong className="font-semibold text-zinc-300">{children}</strong>
   ),
   hyperlink: ({ children, node }) => (
     <PrismicNextLink
       field={node.data}
-      className="underline decoration-1 underline-offset-2"
+      className="underline decoration-1 underline-offset-2 text-zinc-300"
     >
       {children}
     </PrismicNextLink>

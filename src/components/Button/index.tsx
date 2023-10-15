@@ -91,7 +91,7 @@ export const Button = ({
           justify-center 
           items-center 
           gap-2 
-          ${clsx(primary ? "bg-neutral-800" : "bg-green-400")}
+          ${clsx(primary ? "bg-neutral-700" : "bg-green-400")}
           ${clsx(disabled && "bg-opacity-50")}
           ${clsx(
             size === "medium"

@@ -7,11 +7,15 @@ import clsx from "clsx";
 import "./MobileNavigationMenu.css";
 import { usePathname } from "next/navigation";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { Locales } from "../../utils/getLocales";
+import { MultiLanguageMenu } from "./MultiLanguageMenu";
 
 export const MobileNavigationMenu = ({
   data,
+  locales,
 }: {
   data: Simplify<NavigationDocumentData>;
+  locales: Locales;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -33,7 +37,7 @@ export const MobileNavigationMenu = ({
         <div>
           <Link
             size={"small"}
-            className={clsx("text-black text-2xl")}
+            className={clsx("text-zinc-50 text-2xl ")}
             key={data.homepage_label}
             link={data.homepage_link}
             text={data.homepage_label}
@@ -41,23 +45,26 @@ export const MobileNavigationMenu = ({
         </div>
         <Menubar.Root className="flex p-[3px]">
           <Menubar.Menu>
-            <Menubar.Trigger
-              aria-labelledby="button"
-              aria-label="Hamburger button, which opens the mobile navigation menu"
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:py-2 lg:px-3 outline-none select-none"
-            >
-              {isOpen ? (
-                <Cross1Icon width={24} height={24} />
-              ) : (
-                <HamburgerMenuIcon width={24} height={24} />
-              )}
-            </Menubar.Trigger>
+            <div className={"flex flex-row gap-8"}>
+              <MultiLanguageMenu locales={locales} />
+              <Menubar.Trigger
+                aria-labelledby="button"
+                aria-label="Hamburger button, which opens the mobile navigation menu"
+                onClick={() => setIsOpen(!isOpen)}
+                className="lg:py-2 lg:px-3 outline-none select-none"
+              >
+                <HamburgerMenuIcon
+                  width={24}
+                  height={24}
+                  className={"text-zinc-50"}
+                />
+              </Menubar.Trigger>
+            </div>
             {isOpen && (
               <Menubar.Portal>
                 <Menubar.Content
                   loop
-                  className="md:hidden animation w-screen h-[100vh] bg-zinc-50 z-50"
+                  className="md:hidden animation w-screen h-[100vh] bg-stone-900 z-50"
                   align="start"
                   sideOffset={-43}
                   alignOffset={0}
@@ -69,18 +76,22 @@ export const MobileNavigationMenu = ({
                           <div>
                             <Link
                               size={"small"}
-                              className={clsx("text-black text-2xl")}
+                              className={clsx("text-zinc-300 text-2xl")}
                               key={data.homepage_label}
                               link={data.homepage_link}
                               text={data.homepage_label}
                             />
                           </div>
-                          <div onClick={() => setIsOpen(false)}>
-                            <Cross1Icon
-                              width={24}
-                              height={24}
-                              className={"mr-1"}
-                            />
+
+                          <div className={"flex flex-row gap-8"}>
+                            <MultiLanguageMenu locales={locales} />
+                            <div onClick={() => setIsOpen(false)}>
+                              <Cross1Icon
+                                width={24}
+                                height={24}
+                                className={"mr-1 text-zinc-50"}
+                              />
+                            </div>
                           </div>
                         </div>
                       </>
@@ -91,7 +102,7 @@ export const MobileNavigationMenu = ({
                           <Menubar.Item key={label}>
                             <Link
                               link={link}
-                              className={clsx("text-2xl text-zinc-600")}
+                              className={clsx("text-2xl text-zinc-300")}
                               text={label}
                             />
                           </Menubar.Item>
@@ -103,7 +114,7 @@ export const MobileNavigationMenu = ({
                           <Menubar.Item key={label}>
                             <Link
                               link={link}
-                              className={clsx("text-2xl text-zinc-600")}
+                              className={clsx("text-2xl text-zinc-300")}
                               text={label}
                             />
                           </Menubar.Item>
