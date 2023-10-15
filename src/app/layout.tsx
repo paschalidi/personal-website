@@ -1,12 +1,9 @@
 import "./globals.css";
-
-import { Inter } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import NextTopLoader from "nextjs-toploader";
 
 import { repositoryName } from "../prismicio";
 import { ReactNode } from "react";
-
 
 export default async function RootLayout({
   children,
