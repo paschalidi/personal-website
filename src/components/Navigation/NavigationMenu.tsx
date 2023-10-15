@@ -70,7 +70,7 @@ export const NavigationMenu = ({
                   {data.dropdown_links.map(({ link, label }) => {
                     return (
                       <div className={"group w-fit"} key={label}>
-                        <PrismicNextLink field={link} >
+                        <PrismicNextLink field={link}>
                           <PrismicText field={label} />
                         </PrismicNextLink>
                         <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-[2px] bg-black" />

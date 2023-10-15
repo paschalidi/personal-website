@@ -48,9 +48,8 @@ export const MultiLanguageMenu = ({ locales }: { locales: Locales }) => {
           >
             {locales.map(({ lang, url, lang_name }) => {
               return (
-                <div className={"group w-fit"}>
+                <div className={"group w-fit"} key={url}>
                   <PrismicNextLink
-                    key={url}
                     href={url}
                     locale={lang}
                     aria-label={`Change language to ${lang_name}`}
