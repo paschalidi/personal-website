@@ -70,6 +70,7 @@ export default async function Page({ params: { lang } }) {
             )}
           >
             <div>
+              <PrismicRichText field={data.title} />
               <PrismicRichText field={data.text} />
             </div>
           </div>

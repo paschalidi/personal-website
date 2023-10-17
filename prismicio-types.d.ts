@@ -9,6 +9,17 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
  */
 interface AboutDocumentData {
   /**
+   * title field in *About Page*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
    * Image  field in *About Page*
    *
    * - **Field Type**: Image

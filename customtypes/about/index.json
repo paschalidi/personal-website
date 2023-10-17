@@ -6,6 +6,15 @@
   "status": true,
   "json": {
     "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
       "image": {
         "type": "Image",
         "config": {

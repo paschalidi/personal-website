@@ -23,7 +23,7 @@ export const NavigationMenu = ({
     <header className={clsx("bg-transparent")}>
       <nav className="relative flex w-full flex-wrap items-center justify-between py-4 h-[92px]">
         <div className="flex w-full flex-wrap items-center justify-between">
-          <div>
+          <h1>
             <Link
               size={"large"}
               className={clsx("text-zinc-300 text-2xl")}
@@ -31,7 +31,7 @@ export const NavigationMenu = ({
               link={data.homepage_link}
               text={data.homepage_label}
             />
-          </div>
+          </h1>
           <div
             className={clsx(
               "hidden md:flex md:flex-row gap-3 lg:gap-4 xl:gap-8 items-center",
