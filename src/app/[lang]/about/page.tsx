@@ -16,10 +16,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const page = await client.getSingle("about").catch(() => notFound());
   return {
+    authors: { name: "Elena Griva", url: "https://www.artegriva.com" },
     title: page.data.meta_title,
     description: page.data.meta_description,
     openGraph: {
       title: page.data.meta_title,
+      description: page.data.meta_description,
       images: [
         {
           url: page.data.meta_image?.url,

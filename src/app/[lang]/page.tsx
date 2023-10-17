@@ -12,11 +12,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const page = await client.getByUID("page", "home");
 
   return {
+    authors: { name: "Elena Griva", url: "https://www.artegriva.com" },
     title: page.data.meta_title,
     description: page.data.meta_description,
     keywords: page.data.meta_keywords,
     openGraph: {
       title: page.data.meta_title,
+      description: page.data.meta_description,
       images: [
         {
           url: page.data.meta_image?.url,
