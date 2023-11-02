@@ -17,31 +17,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://www.artegriva.com/about",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "yearly",
       priority: 0.8,
     },
     {
       url: "https://www.artegriva.com/el-gr/about",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "yearly",
       priority: 0.8,
     },
     {
       url: "https://www.artegriva.com/works-collections",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: "https://www.artegriva.com/el-gr/works-collections",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: "https://www.artegriva.com/works-sketches-and-studies",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.artegriva.com/works-illustrations",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
       priority: 0.7,
     },
   ];
