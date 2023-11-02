@@ -581,12 +581,33 @@ export interface ListOfImagesSliceDefaultPrimary {
   /**
    * Header field in *ListOfImages → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: list_of_images.primary.header
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  header: prismic.KeyTextField;
+  header: prismic.RichTextField;
+
+  /**
+   * paragraph field in *ListOfImages → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_of_images.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+
+  /**
+   * has margin bottom field in *ListOfImages → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: list_of_images.primary.has_margin_bottom
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_margin_bottom: prismic.BooleanField;
 }
 
 /**

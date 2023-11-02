@@ -14,6 +14,7 @@ import {
   InstagramLogoIcon,
 } from "@radix-ui/react-icons";
 import { ErrorBoundary } from "react-error-boundary";
+import { Fallback } from "../../components/Fallback";
 
 const ContactFormSchema = Yup.object().shape({
   first_name: Yup.string()
@@ -46,7 +47,7 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
   const [hasError, setHasError] = useState(null);
   const [isFormSubmissionSuccess, setIsFormSubmissionSuccess] = useState(false);
   return (
-    <ErrorBoundary fallback={null}>
+    <ErrorBoundary fallback={<Fallback />}>
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}

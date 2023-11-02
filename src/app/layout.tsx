@@ -12,7 +12,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="pc pt-6 sm:pt-10 md:pt-14 overflow-x-hidden antialiased bg-stone-900">
+      <body className="pc pt-6 sm:pt-8 md:pt-10 overflow-x-hidden antialiased bg-stone-900">
         <NextTopLoader
           color="#000"
           initialPosition={0.08}

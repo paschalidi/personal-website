@@ -66,6 +66,9 @@ export const PrismicRichText = ({
   className?: string;
   components?: JSXMapSerializer;
 }) => {
+  if (!field.length) {
+    return null;
+  }
   return (
     <BasePrismicRichText
       components={{ ...defaultComponents, ...components }}

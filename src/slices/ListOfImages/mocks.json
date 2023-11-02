@@ -4,9 +4,30 @@
 		"variation": "default",
 		"primary": {
 			"header": {
-				"__TYPE__": "FieldContent",
-				"value": "positive",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Exercitation excepteur irure dolor cupidatat amet commodo laboris ut aliqua."
+						}
+					}
+				]
+			},
+			"paragraph": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Proident tempor reprehenderit non ut voluptate esse laboris elit dolore. Enim do occaecat esse amet non eiusmod. Nulla ut reprehenderit aliquip velit fugiat ex ullamco Lorem veniam sint."
+						}
+					}
+				]
+			},
+			"has_margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": false
 			}
 		},
 		"items": [

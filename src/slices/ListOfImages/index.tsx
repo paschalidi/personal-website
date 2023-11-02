@@ -13,6 +13,8 @@ import { PrismicRichText } from "../../components/PrismicRichText";
 import { useEffect, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { Fallback } from "../../components/Fallback";
+import clsx from "clsx";
 
 const rearrangeArray = (
   arr: Content.ListOfImagesSlice["items"],
@@ -43,16 +45,37 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
   }, [indexOfOpenedImage, slice.items]);
 
   return (
-    <ErrorBoundary fallback={null}>
+    <ErrorBoundary fallback={<Fallback />}>
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className={"my-16 md:mt-28 mb-32 md:mb-40"}
+        className={clsx(
+          slice.primary.has_margin_bottom && " mb-32 md:mt-28 md:mb-40",
+          "mt-16",
+        )}
       >
         <Dialog.Root>
-          <h1 className={"mb-12 text-zinc-300 text-3xl"}>
-            {slice.primary.header}
-          </h1>
+          {slice.primary.header && (
+            <PrismicRichText
+              field={slice.primary.header}
+              components={{
+                heading1: ({ children }) => (
+                  <h1 className={"text-zinc-300 text-3xl"}>{children}</h1>
+                ),
+              }}
+            />
+          )}
+          {!!slice.primary.paragraph.length && (
+            <PrismicRichText
+              field={slice.primary.paragraph}
+              components={{
+                paragraph: ({ children }) => (
+                  <p className={"text-zinc-300 mt-2 mb-10"}>{children}</p>
+                ),
+              }}
+            />
+          )}
+
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
           >
@@ -90,9 +113,11 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
           <Dialog.Portal>
             <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0" />
             <Dialog.Content className="z-50 data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] h-screen w-screen translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-stone-950 p-[25px] shadow focus:outline-none">
-              <Dialog.Title className="text-mauve12 m-0 text-[17px] font-medium text-zinc-300">
-                {slice.primary.header}
-              </Dialog.Title>
+              {slice.primary.header.length && (
+                <Dialog.Title className="text-mauve12 m-0 text-[17px] font-medium text-zinc-300">
+                  <PrismicRichText field={slice.primary.header} />
+                </Dialog.Title>
+              )}
               <Swiper
                 loop={true}
                 modules={[Navigation, A11y]}
