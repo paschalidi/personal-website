@@ -33,12 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: "https://www.artegriva.com/el-gr/works-collections",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
       url: "https://www.artegriva.com/works-sketches-and-studies",
       lastModified: new Date(),
       changeFrequency: "monthly",
