@@ -12,6 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "uid": {
+          "type": "Text",
+          "config": {
+            "label": "uid",
+            "placeholder": ""
+          }
+        },
         "header": {
           "type": "StructuredText",
           "config": {

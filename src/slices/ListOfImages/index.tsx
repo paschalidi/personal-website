@@ -6,6 +6,7 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { A11y, Navigation } from "swiper/modules";
+import { useSearchParams } from "next/navigation";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -50,8 +51,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
         className={clsx(
-          slice.primary.has_margin_bottom && " mb-32 md:mt-28 md:mb-40",
-          "mt-16",
+          !slice.primary.has_margin_bottom && "mb-32 md:mb-40 md:mt-28 mt-16",
         )}
       >
         <Dialog.Root>
@@ -76,6 +76,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
             />
           )}
 
+          <a href={`#${slice.primary.uid}`} />
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
           >

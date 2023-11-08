@@ -579,6 +579,16 @@ export type ContactFormSlice = prismic.SharedSlice<
  */
 export interface ListOfImagesSliceDefaultPrimary {
   /**
+   * uid field in *ListOfImages → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_of_images.primary.uid
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  uid: prismic.KeyTextField;
+
+  /**
    * Header field in *ListOfImages → Primary*
    *
    * - **Field Type**: Rich Text

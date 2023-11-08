@@ -28,6 +28,11 @@
 			"has_margin_bottom": {
 				"__TYPE__": "BooleanContent",
 				"value": false
+			},
+			"uid": {
+				"__TYPE__": "FieldContent",
+				"value": "in",
+				"type": "Text"
 			}
 		},
 		"items": [
