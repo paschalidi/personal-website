@@ -6,7 +6,6 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { A11y, Navigation } from "swiper/modules";
-import { useSearchParams } from "next/navigation";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -48,6 +47,7 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
   return (
     <ErrorBoundary fallback={<Fallback />}>
       <section
+        id={slice.primary.uid}
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
         className={clsx(
@@ -76,41 +76,43 @@ const ListOfImages = ({ slice }: ListOfImagesProps): JSX.Element => {
             />
           )}
 
-          <a href={`#${slice.primary.uid}`} />
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-          >
-            <Masonry gutter={"16px"}>
-              {slice.items.map(({ description, image }, index) => {
-                return (
-                  <Dialog.Trigger asChild key={asText(description)}>
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-haspopup="dialog"
-                      aria-expanded="false"
-                      aria-controls="radix-:Rddcta:"
-                      aria-label="Open dialog"
-                    >
-                      <PrismicNextImage
-                        width={image.dimensions.width}
-                        height={image.dimensions.height}
-                        field={image}
-                        onClick={() => {
-                          setIndexOfOpenedImage(index);
-                        }}
-                        className={"transition-opacity opacity-0 duration-100"}
-                        onLoadingComplete={(image) => {
-                          image.classList.remove("opacity-0");
-                        }}
-                      />
-                    </div>
-                  </Dialog.Trigger>
-                );
-              })}
-            </Masonry>
-          </ResponsiveMasonry>
-
+          <a href={`#${slice.primary.uid}`}>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+            >
+              <Masonry gutter={"16px"}>
+                {slice.items.map(({ description, image }, index) => {
+                  return (
+                    <Dialog.Trigger asChild key={asText(description)}>
+                      <div
+                        role="button"
+                        tabIndex={0}
+                        aria-haspopup="dialog"
+                        aria-expanded="false"
+                        aria-controls="radix-:Rddcta:"
+                        aria-label="Open dialog"
+                      >
+                        <PrismicNextImage
+                          width={image.dimensions.width}
+                          height={image.dimensions.height}
+                          field={image}
+                          onClick={() => {
+                            setIndexOfOpenedImage(index);
+                          }}
+                          className={
+                            "transition-opacity opacity-0 duration-100"
+                          }
+                          onLoadingComplete={(image) => {
+                            image.classList.remove("opacity-0");
+                          }}
+                        />
+                      </div>
+                    </Dialog.Trigger>
+                  );
+                })}
+              </Masonry>
+            </ResponsiveMasonry>
+          </a>
           <Dialog.Portal>
             <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0" />
             <Dialog.Content className="z-50 data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] h-screen w-screen translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-stone-950 p-[25px] shadow focus:outline-none">
